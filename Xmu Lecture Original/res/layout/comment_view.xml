@@ -139,13 +139,12 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:paddingBottom="50dp"
-                    android:paddingTop="23dp" >
+                    android:paddingTop="50dp" >
 
                     <Button
                         android:id="@+id/comment_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:background="@drawable/button_selector"
                         android:gravity="center"
                         android:paddingBottom="5dp"
@@ -155,9 +154,8 @@
                         android:text="发表评论"
                         android:textColor="@color/item_content"
                         android:textSize="17sp"
-                        android:textStyle="bold" >
+                        android:textStyle="bold" />
 
-                    </Button>
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

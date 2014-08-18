@@ -308,7 +308,7 @@ public class MainView extends Activity
 							public void onItemClick(AdapterView<?> parent, View view, int position,
 									long id) {
 								
-								Toast.makeText(MainView.this,"您选择了讲座：" + ((TextView)view.findViewById(R.id.lecture_id)).getText(),Toast.LENGTH_LONG ).show();
+								//Toast.makeText(MainView.this,"您选择了讲座：" + ((TextView)view.findViewById(R.id.lecture_id)).getText(),Toast.LENGTH_LONG ).show();
 								
 								//下面代码来自 KunCheng，用于显示详细信息
 								Bundle detail_bundle = new Bundle();
@@ -1599,7 +1599,7 @@ public class MainView extends Activity
 			Intent intent;
 			switch (v.getId()) {
 			case R.id.about_author:
-				Toast.makeText(MainView.this, "关于作者", Toast.LENGTH_LONG).show();
+			
 				
 				intent = new Intent(MainView.this, AboutPages.class);
 				intent.putExtra("whichPage", "aboutAuthor");
@@ -1611,7 +1611,7 @@ public class MainView extends Activity
 				
 				break;
 			case R.id.about_xmu_lecture:
-				Toast.makeText(MainView.this, "关于讲座网", Toast.LENGTH_LONG).show();
+			
 				
 				intent = new Intent(MainView.this, AboutPages.class);
 				intent.putExtra("whichPage", "aboutXmuLecture");
@@ -1622,7 +1622,7 @@ public class MainView extends Activity
 				
 				break;
 			case R.id.about_app:
-				Toast.makeText(MainView.this, "关于应用", Toast.LENGTH_LONG).show();
+				
 
 				intent = new Intent(MainView.this, AboutPages.class);
 				intent.putExtra("whichPage", "aboutApp");
@@ -1633,7 +1633,7 @@ public class MainView extends Activity
 				
 				break;
 			case R.id.pop_exitImageView:
-				Toast.makeText(MainView.this, "已退出！", Toast.LENGTH_LONG).show();
+				Toast.makeText(MainView.this, "厦大讲座 已退出", Toast.LENGTH_LONG).show();
 				
 				if( popMenu != null )
 					popMenu.dismiss();

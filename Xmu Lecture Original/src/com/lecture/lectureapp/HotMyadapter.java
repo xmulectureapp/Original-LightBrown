@@ -524,7 +524,7 @@ public class HotMyadapter extends BaseAdapter
 				
 				switch (v.getId()) {
 				case R.id.wechat_share:
-					Toast.makeText(mContext, "微信好友", Toast.LENGTH_LONG).show();
+					
 					
 					
 					intent = new  Intent(mContext, WXEntryActivity.class);	
@@ -539,7 +539,7 @@ public class HotMyadapter extends BaseAdapter
 					
 					break;
 				case R.id.wechat_circle_share:
-					Toast.makeText(mContext, "微信朋友圈", Toast.LENGTH_LONG).show();
+					
 					
 					
 					intent = new  Intent(mContext, WXEntryActivity.class);	
@@ -553,7 +553,7 @@ public class HotMyadapter extends BaseAdapter
 					
 					break;
 				case R.id.weibo_share:
-					Toast.makeText(mContext, "新浪微博", Toast.LENGTH_LONG).show();
+					
 					
 					Intent sendIntent = new Intent();
 					
@@ -574,7 +574,7 @@ public class HotMyadapter extends BaseAdapter
 									+ "地点: " + "#" + event.getAddress().substring(0, 4) + "#" + event.getAddress().substring(4) + " | " 
 									+ "主讲: " + event.getSpeaker() + " | "
 									+ "详情点击: "
-									+ event.getLink()  + " From #厦大讲座App Especially#" );
+									+ event.getLink()  + " From #厦大讲座App#" );
 	                	
 	                	sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  
 			

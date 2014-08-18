@@ -120,10 +120,11 @@
 		-->
 
 		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:layout_alignParentBottom="true"
-			android:paddingBottom="2dp" >
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:paddingBottom="2dp"
+		    android:weightSum="5" >
 
 			<LinearLayout
 				android:id="@+id/hot_btn_layout"
@@ -230,29 +231,30 @@
 			</LinearLayout>
 
 			<LinearLayout
-				android:id="@+id/my_btn_layout"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_weight="1"
-				android:gravity="center_horizontal"
-				android:orientation="vertical" >
+			    android:id="@+id/my_btn_layout"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:gravity="center_horizontal"
+			    android:orientation="vertical" >
 
 				<ImageView
-					android:id="@+id/img_my_center"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:clickable="false"
-					android:scaleType="matrix"
-					android:src="@drawable/mycenter_normal" />
+				    android:id="@+id/img_my_center"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:clickable="false"
+				    android:scaleType="matrix"
+				    android:src="@drawable/mycenter_normal" />
 
 				<TextView
-					android:id="@+id/mText5"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:clickable="false"
-					android:text="我"
-					android:textColor="@color/main_menu_normal"
-					android:textSize="12sp" />
+				    android:id="@+id/mText5"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:clickable="false"
+				    android:text="我"
+				    android:textColor="@color/main_menu_normal"
+				    android:textSize="12sp" />
+
 			</LinearLayout>
 		</LinearLayout>
 	</RelativeLayout>
