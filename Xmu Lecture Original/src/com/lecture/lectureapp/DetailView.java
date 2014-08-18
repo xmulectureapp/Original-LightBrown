@@ -208,7 +208,7 @@ public class DetailView extends Activity {
 			imageViewLike.setImageDrawable(getResources().getDrawable(
 					R.drawable.like));
 			textViewLike.setTextColor(getResources().getColor(
-					R.color.item_content));
+					R.color.main_menu_normal));
 
 		}
 
@@ -283,7 +283,7 @@ public class DetailView extends Activity {
 										.getReadableDatabase(), event.getUid(),
 								true);
 						event.updateLikeCount(1);// 1 表示＋1
-						LikeInterface.LikeGo(event.getUid(), "1");
+						new LikeInterface().LikeGo(event.getUid(), "1");
 						
 						DBCenter.likeDBSync(
 								DBCenter.getStaticDBCenter(DetailView.this)
@@ -327,7 +327,7 @@ public class DetailView extends Activity {
 								false);
 						event.updateLikeCount(-1);// -1 表示＋ (-1)
 						
-						LikeInterface.LikeGo(event.getUid(), "0");
+						new LikeInterface().LikeGo(event.getUid(), "0");
 						DBCenter.likeDBSync(
 								DBCenter.getStaticDBCenter(DetailView.this)
 										.getReadableDatabase(), event.getUid(), "0");

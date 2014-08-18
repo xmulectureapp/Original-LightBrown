@@ -289,15 +289,15 @@
 			</LinearLayout>
 
 			<LinearLayout
-				android:id="@+id/my_linearlayout6"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:layout_below="@+id/my_linearlayout3"
-				android:layout_marginTop="7dp"
-				android:gravity="center"
-				android:orientation="horizontal"
-				android:paddingRight="20dp"
-				android:paddingTop="10dp" >
+			    android:id="@+id/my_linearlayout6"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/my_linearlayout3"
+			    android:gravity="center"
+			    android:orientation="horizontal"
+			    android:paddingBottom="150dp"
+			    android:paddingRight="20dp"
+			    android:paddingTop="40dp" >
 
 				<Button
 				    android:id="@+id/save_settings"
@@ -306,13 +306,13 @@
 				    android:layout_alignParentBottom="true"
 				    android:layout_gravity="center"
 				    android:layout_marginRight="5dp"
-				    android:background="#804f3e62"
+				    android:background="@drawable/button_selector"
 				    android:gravity="center"
 				    android:onClick="save"
-				    android:paddingBottom="3dp"
+				    android:paddingBottom="4dp"
 				    android:paddingLeft="27dp"
 				    android:paddingRight="27dp"
-				    android:paddingTop="3dp"
+				    android:paddingTop="4dp"
 				    android:text="保存设置"
 				    android:textColor="@color/item_content"
 				    android:textSize="17sp"
@@ -325,13 +325,13 @@
 				    android:layout_alignParentBottom="true"
 				    android:layout_gravity="center"
 				    android:layout_marginLeft="5dp"
-				    android:background="#804f3e62"
+				    android:background="@drawable/button_selector"
 				    android:gravity="center"
 				    android:onClick="save"
-				    android:paddingBottom="3dp"
+				    android:paddingBottom="4dp"
 				    android:paddingLeft="27dp"
 				    android:paddingRight="27dp"
-				    android:paddingTop="3dp"
+				    android:paddingTop="4dp"
 				    android:text="关于设置"
 				    android:textColor="@color/item_content"
 				    android:textSize="17sp"
@@ -339,13 +339,7 @@
 				
 			</LinearLayout>
 
-			<LinearLayout
-				android:layout_width="fill_parent"
-				android:layout_height="100dp"
-				android:layout_alignParentBottom="true"
-				android:layout_below="@+id/my_linearlayout6"
-				android:paddingTop="2dp" >
-			</LinearLayout>
+			
 		</LinearLayout>
 	</ScrollView>
 

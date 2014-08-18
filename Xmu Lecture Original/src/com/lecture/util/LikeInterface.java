@@ -22,7 +22,7 @@ public class LikeInterface {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public static void LikeGo(final String id, final String isLiked){
+	public void LikeGo(final String id, final String isLiked){
 		
 		new Thread(new Runnable() {
 

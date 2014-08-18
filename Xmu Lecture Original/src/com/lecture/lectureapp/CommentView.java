@@ -179,6 +179,10 @@ public class CommentView extends Activity {
 	
 	public Boolean isValidComment(String userComment){
 		
+		
+		if( userComment == null || userComment.equals("") )
+			return false;
+		
 		return true;
 		
 	}

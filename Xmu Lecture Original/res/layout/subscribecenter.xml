@@ -9,15 +9,16 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         >
+
   <ListView
-    	android:id="@+id/list_view_subscribe"
-    	android:layout_width="fill_parent"
-    	android:layout_height="fill_parent"
-    	android:divider="#00000000"
-    	android:dividerHeight="18dp"
-    	android:paddingLeft="10dp"
-    	android:paddingRight="10dp"
-    	android:scrollbars="none" >
+      android:id="@+id/list_view_subscribe"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:divider="#00000000"
+      android:dividerHeight="18dp"
+      android:paddingLeft="7dp"
+      android:paddingRight="7dp"
+      android:scrollbars="none" >
 
         </ListView>
    </com.lecture.layoutUtil.RefreshableView>

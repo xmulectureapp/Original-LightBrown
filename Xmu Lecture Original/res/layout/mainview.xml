@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/mainview"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
-	android:background="@drawable/fengyu_count"
-	android:orientation="vertical" >
+    android:id="@+id/mainview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_view_background5"
+    android:orientation="vertical" >
 
 	<LinearLayout
-		android:id="@+id/mainview_middle"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:orientation="vertical" >
+	    android:id="@+id/mainview_middle"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
 
 		<android.support.v4.view.ViewPager
-			android:id="@+id/tabpager"
-			android:layout_width="wrap_content"
-			android:layout_height="match_parent"
-			android:layout_gravity="center"
-			android:background="@color/item_background" >
+		    android:id="@+id/tabpager"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_gravity="center" >
+
 		</android.support.v4.view.ViewPager>
 	</LinearLayout>
 
 	<RelativeLayout
-		android:id="@+id/main_top"
-		android:layout_width="fill_parent"
-		android:layout_height="36dp"
-		android:background="#c7312a1f"
-		android:gravity="center_vertical"
-		android:orientation="vertical" >
+	    android:id="@+id/main_top"
+	    android:layout_width="fill_parent"
+	    android:layout_height="36dp"
+	    android:background="@drawable/top_bg"
+	    android:gravity="center_vertical"
+	    android:orientation="vertical" >
 
 		<!-- 添加主界面的 -->
 
@@ -37,17 +37,16 @@
 			android:layout_height="fill_parent" />
 
 		<TextView
-			android:id="@+id/ivTitleName"
-			style="@style/A1_Font"
-			android:layout_width="wrap_content"
-			android:layout_height="fill_parent"
-			android:layout_centerInParent="true"
-			android:ellipsize="end"
-			android:gravity="center"
-			android:singleLine="true"
-			android:text="@string/app_name"
-			android:textColor="@color/top_title_color"
-			android:textSize="18sp" />
+		    android:id="@+id/ivTitleName"
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_centerInParent="true"
+		    android:ellipsize="end"
+		    android:gravity="center_vertical"
+		    android:singleLine="true"
+		    android:text="@string/app_name"
+		    android:textColor="@color/main_menu_pressed"
+		    android:textSize="20sp" />
 
 		<!--
     <ImageView
@@ -101,12 +100,13 @@
 	</RelativeLayout>
 
 	<RelativeLayout
-		android:id="@+id/main_bottom"
-		android:layout_width="match_parent"
-		android:layout_height="55dp"
-		android:layout_alignParentBottom="true"
-		android:background="#ef312a1f"
-		android:orientation="vertical" >
+	    android:id="@+id/main_bottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="55dp"
+	    android:layout_alignParentBottom="true"
+	    android:background="@drawable/bottom_bar11"
+	    android:orientation="vertical"
+	    android:tileMode="repeat" >
 
 		<!--
         <ImageView
@@ -134,12 +134,12 @@
 				android:orientation="vertical" >
 
 				<ImageView
-					android:id="@+id/img_hot_center"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:clickable="false"
-					android:scaleType="matrix"
-					android:src="@drawable/hotlecturecenter_pressed" />
+				    android:id="@+id/img_hot_center"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:clickable="false"
+				    android:scaleType="matrix"
+				    android:src="@drawable/hotlecturecenter_pressed" />
 
 				<TextView
 					android:id="@+id/mText1"

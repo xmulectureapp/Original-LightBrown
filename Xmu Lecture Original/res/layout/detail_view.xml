@@ -7,31 +7,27 @@
 	android:orientation="vertical"
 	android:textAlignment="center" >
 	
-
 	<RelativeLayout
-		android:id="@+id/detail_main"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:layout_gravity="right|center"
-		android:background="@drawable/item_view_background"
-		android:orientation="vertical"
-		android:textAlignment="center" >
-
-		
+	    android:id="@+id/detail_main"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_gravity="right|center"
+	    android:background="@drawable/item_view_background3"
+	    android:orientation="vertical"
+	    android:textAlignment="center" >
 
 		<RelativeLayout
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:layout_alignParentLeft="true"
-			android:background="@color/item_background"
-			android:orientation="vertical"
-			android:paddingTop="50dp" >
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_alignParentLeft="true"
+		    android:background="@color/item_background"
+		    android:orientation="vertical" >
 
 			<ScrollView
-				android:id="@+id/detail_scrollview"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:scrollbars="none" >
+			    android:id="@+id/detail_scrollview"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:scrollbars="none" >
 
 				<RelativeLayout
 					android:id="@+id/detail_relativeLayout1"
@@ -52,12 +48,13 @@
 						android:orientation="vertical" >
 
 						<RelativeLayout
-							android:id="@+id/detail_relativeLayout1"
-							android:layout_width="fill_parent"
-							android:layout_height="fill_parent"
-							android:layout_gravity="right|center"
-							android:orientation="vertical"
-							android:textAlignment="center" >
+						    android:id="@+id/detail_relativeLayout1"
+						    android:layout_width="fill_parent"
+						    android:layout_height="fill_parent"
+						    android:layout_gravity="right|center"
+						    android:orientation="vertical"
+						    android:paddingTop="50dp"
+						    android:textAlignment="center" >
 
 							<TextView
 								android:id="@+id/detail_lecture_name"
@@ -234,12 +231,12 @@
 		</RelativeLayout>
 
 		<LinearLayout
-			android:layout_width="fill_parent"
-			android:layout_height="36dp"
-			android:layout_alignParentBottom="true"
-			android:layout_alignParentLeft="true"
-			android:animateLayoutChanges="true"
-			android:background="@drawable/bottom_bar4" >
+		    android:layout_width="fill_parent"
+		    android:layout_height="36dp"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentLeft="true"
+		    android:animateLayoutChanges="true"
+		    android:background="@drawable/bottom_bar8" >
 
 			<LinearLayout
 				android:id="@+id/detail_linearlayout_share"
@@ -267,15 +264,16 @@
 					android:paddingTop="10dp" />
 
 				<TextView
-					android:id="@+id/detail_share_text"
-					android:layout_width="wrap_content"
-					android:layout_height="match_parent"
-					android:layout_gravity="center"
-					android:gravity="center"
-					android:text="分享"
-					android:textAlignment="gravity"
-					android:textColor="@color/item_content"
-					android:textSize="12sp" />
+				    android:id="@+id/detail_share_text"
+				    android:layout_width="wrap_content"
+				    android:layout_height="match_parent"
+				    android:layout_gravity="center"
+				    android:gravity="center"
+				    android:text="分享"
+				    android:textAlignment="gravity"
+				    android:textColor="@color/main_menu_normal"
+				    android:textSize="12sp" />
+
 			</LinearLayout>
 
 			<ImageView
@@ -311,14 +309,15 @@
 					android:gravity="center_horizontal" />
 
 				<TextView
-					android:id="@+id/detail_comment_text"
-					android:layout_width="wrap_content"
-					android:layout_height="match_parent"
-					android:layout_gravity="center"
-					android:gravity="center"
-					android:text="评论"
-					android:textColor="@color/item_content"
-					android:textSize="12sp" />
+				    android:id="@+id/detail_comment_text"
+				    android:layout_width="wrap_content"
+				    android:layout_height="match_parent"
+				    android:layout_gravity="center"
+				    android:gravity="center"
+				    android:text="评论"
+				    android:textColor="@color/main_menu_normal"
+				    android:textSize="12sp" />
+
 			</LinearLayout>
 
 			<ImageView
@@ -353,14 +352,15 @@
 					android:gravity="center_horizontal" />
 
 				<TextView
-					android:id="@+id/detail_like_text"
-					android:layout_width="wrap_content"
-					android:layout_height="match_parent"
-					android:layout_gravity="center"
-					android:gravity="center"
-					android:text="点赞"
-					android:textColor="@color/item_content"
-					android:textSize="12sp" />
+				    android:id="@+id/detail_like_text"
+				    android:layout_width="wrap_content"
+				    android:layout_height="match_parent"
+				    android:layout_gravity="center"
+				    android:gravity="center"
+				    android:text="点赞"
+				    android:textColor="@color/main_menu_normal"
+				    android:textSize="12sp" />
+
 			</LinearLayout>
 
 			<ImageView
@@ -395,46 +395,46 @@
 					android:gravity="center_horizontal" />
 
 				<TextView
-					android:id="@+id/detail_remind_text"
-					android:layout_width="wrap_content"
-					android:layout_height="match_parent"
-					android:layout_gravity="center"
-					android:gravity="center"
-					android:text="收藏"
-					android:textColor="@color/item_content"
-					android:textSize="12sp" />
+				    android:id="@+id/detail_remind_text"
+				    android:layout_width="wrap_content"
+				    android:layout_height="match_parent"
+				    android:layout_gravity="center"
+				    android:gravity="center"
+				    android:text="收藏"
+				    android:textColor="@color/main_menu_normal"
+				    android:textSize="12sp" />
+
 			</LinearLayout>
 		</LinearLayout>
 	</RelativeLayout>
+
 	<RelativeLayout
-			android:id="@+id/detail_top"
-			android:layout_width="fill_parent"
-			android:layout_height="47dp"
-			android:background="@color/top_background_color"
-			android:gravity="center_vertical"
-			android:orientation="vertical" >
+	    android:id="@+id/detail_top"
+	    android:layout_width="fill_parent"
+	    android:layout_height="36dp"
+	    android:gravity="center_vertical"
+	    android:orientation="vertical" >
 
 			<!-- 添加主界面的 -->
 
 			<ImageView
-				android:id="@+id/detail_header_bg"
-				android:layout_width="fill_parent"
-				android:layout_height="fill_parent"
-				android:background="#58aef0" />
+			    android:id="@+id/detail_header_bg"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:background="@drawable/top_bg" />
 
 			<TextView
-				android:id="@+id/detail_header_title"
-				style="@style/A1_Font"
-				android:layout_width="wrap_content"
-				android:layout_height="fill_parent"
-				android:layout_centerInParent="true"
-				android:ellipsize="end"
-				android:gravity="center"
-				android:singleLine="true"
-				android:text="讲座详情"
-				android:textColor="@color/top_title_color"
-				android:textSize="20sp"
-				android:textStyle="bold" />
+			    android:id="@+id/detail_header_title"
+			    style="@style/A1_Font"
+			    android:layout_width="wrap_content"
+			    android:layout_height="fill_parent"
+			    android:layout_centerHorizontal="true"
+			    android:ellipsize="end"
+			    android:gravity="center"
+			    android:singleLine="true"
+			    android:text="讲座详情"
+			    android:textColor="@color/main_menu_pressed"
+			    android:textSize="20sp" />
 
 			<LinearLayout
 			    android:id="@+id/detail_header_left_linearLayout"

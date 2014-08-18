@@ -334,7 +334,7 @@ public class HotMyadapter extends BaseAdapter
 				    			//喜欢的话，进行数据表LikeTable更新
 					    		DBCenter.setLike(dbCenter.getReadableDatabase(), event.getUid(), true);
 					    		
-					    		//LikeInterface.LikeGo(event.getUid(), "1");
+					    		new LikeInterface().LikeGo(event.getUid(), "1");
 				    			DBCenter.likeDBSync(dbCenter.getReadableDatabase(), event.getUid(), "1");
 				    			
 				    			//下面一句解决马上变Like数字
