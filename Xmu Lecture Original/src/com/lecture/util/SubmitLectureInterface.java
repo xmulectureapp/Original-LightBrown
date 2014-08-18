@@ -54,7 +54,7 @@ public class SubmitLectureInterface {
 					mCallback.onStart();
 					
 					Log.i("提交","开始提交讲座！");
-					URL url = new URL("http://lecture.xmu.edu.cn/appinterface/submit_lecture_interface.php?xml=" + URLEncoder.encode(xml, "UTF-8") );
+					URL url = new URL("http://lecture.xmu.edu.cn/appinterface/submit_lecture_interface.php?key=xianyu_is_swimming_now&xml=" + URLEncoder.encode(xml, "UTF-8") );
 					
 					connection = (HttpURLConnection) url.openConnection();
 					if(connection.getResponseCode() == HttpURLConnection.HTTP_OK)

@@ -180,7 +180,7 @@ public class CommentView extends Activity {
 	public Boolean isValidComment(String userComment){
 		
 		
-		if( userComment == null || userComment.equals("") )
+		if( userComment == null || userComment.trim().equals("") )
 			return false;
 		
 		return true;
