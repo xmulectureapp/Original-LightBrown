@@ -16,20 +16,29 @@
         android:orientation="vertical" >
 		
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/logo_textView"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_above="@+id/logo_textView1"
             android:layout_centerInParent="true"
-            android:src="@drawable/logo_red" />
+            android:scaleType="centerInside"
+            android:src="@drawable/xmu_logo" />
         
         <TextView
-            android:id="@+id/logo_textView"
+            android:id="@+id/logo_textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/logo_textView2"
             android:layout_centerInParent="true"
             android:text="一则讲座，改变一生"
-            android:textColor="#ff5648"
-            android:textStyle="bold" />
+            android:textColor="@color/main_menu_pressed" />
+
+         <TextView
+             android:id="@+id/logo_textView2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:text="微信: xmulecture | 微博: @厦大讲座"
+             android:textColor="@color/main_menu_pressed" />
         
 	</RelativeLayout>
 	
@@ -72,13 +81,13 @@
 					android:src="@drawable/about_app" />
 
 				<TextView
-					android:id="@+id/textView1"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_alignParentBottom="true"
-					android:layout_centerInParent="true"
-					android:text="关于应用"
-					android:textColor="@color/item_title_green" />
+				    android:id="@+id/textView1"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentBottom="true"
+				    android:layout_centerInParent="true"
+				    android:text="关于应用"
+				    android:textColor="@color/item_title_orange" />
 				
 			</RelativeLayout>
 
@@ -91,13 +100,13 @@
 			    android:paddingBottom="10dp" >
 
 				<TextView
-					android:id="@+id/textView2"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_alignParentBottom="true"
-					android:layout_centerInParent="true"
-					android:text="关于讲座网"
-					android:textColor="@color/item_title_orange" />
+				    android:id="@+id/textView2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentBottom="true"
+				    android:layout_centerInParent="true"
+				    android:text="关于讲座网"
+				    android:textColor="#f94d51" />
 
 				<ImageView
 					android:layout_width="match_parent"

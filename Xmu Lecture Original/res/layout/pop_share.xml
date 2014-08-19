@@ -18,20 +18,29 @@
 		android:orientation="vertical" >
 		
        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/logo_textView"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_above="@+id/logo_textView1"
             android:layout_centerInParent="true"
-            android:src="@drawable/logo_white" />
+            android:scaleType="centerInside"
+            android:src="@drawable/xmu_logo" />
         
         <TextView
-            android:id="@+id/logo_textView"
+            android:id="@+id/logo_textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/logo_textView2"
             android:layout_centerInParent="true"
             android:text="一则讲座，改变一生"
-            android:textColor="@color/top_title_color"
-            android:textStyle="bold" />
+            android:textColor="@color/main_menu_pressed" />
+
+         <TextView
+             android:id="@+id/logo_textView2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:text="微信: xmulecture | 微博: @厦大讲座"
+             android:textColor="@color/main_menu_pressed" />
         
 	</RelativeLayout>
         
@@ -92,22 +101,22 @@
 			    android:paddingBottom="10dp" >
 
 				<ImageView
-					android:layout_width="match_parent"
-					android:layout_height="match_parent"
-					android:layout_marginBottom="20dp"
-					android:layout_marginLeft="7dp"
-					android:layout_marginRight="5dp"
-					android:layout_marginTop="10dp"
-					android:scaleType="center"
-					android:src="@drawable/wechat_ico" />
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:layout_marginBottom="20dp"
+				    android:layout_marginLeft="7dp"
+				    android:layout_marginRight="5dp"
+				    android:layout_marginTop="10dp"
+				    android:scaleType="center"
+				    android:src="@drawable/wechat_ico" />
 
 				<TextView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_alignParentBottom="true"
-					android:layout_centerInParent="true"
-					android:text="微信好友"
-					android:textColor="@color/item_title_green" />
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentBottom="true"
+				    android:layout_centerInParent="true"
+				    android:text="微信好友"
+				    android:textColor="#50b540" />
 				
 			</RelativeLayout>
 
@@ -130,12 +139,12 @@
 					android:src="@drawable/wechat_circle_ico" />
 				
 				<TextView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_alignParentBottom="true"
-					android:layout_centerInParent="true"
-					android:text="微信朋友圈"
-					android:textColor="@color/item_title_orange" />
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentBottom="true"
+				    android:layout_centerInParent="true"
+				    android:text="微信朋友圈"
+				    android:textColor="#676c72" />
 
 			</RelativeLayout>
 
@@ -158,12 +167,13 @@
 					android:src="@drawable/weibo_ico" />
 				
 				<TextView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_alignParentBottom="true"
-					android:layout_centerInParent="true"
-					android:text="新浪微博"
-					android:textColor="@color/item_title_blue" />
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentBottom="true"
+				    android:layout_centerInParent="true"
+				    android:text="新浪微博"
+				    android:textColor="#d6443b" />
+
 			</RelativeLayout>
 		</LinearLayout>
 
