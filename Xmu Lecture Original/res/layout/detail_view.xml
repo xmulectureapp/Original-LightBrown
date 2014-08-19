@@ -48,139 +48,6 @@
 						android:orientation="vertical" >
 
 						<RelativeLayout
-						    android:id="@+id/detail_relativeLayout1"
-						    android:layout_width="fill_parent"
-						    android:layout_height="fill_parent"
-						    android:layout_gravity="right|center"
-						    android:orientation="vertical"
-						    android:paddingTop="50dp"
-						    android:textAlignment="center" >
-
-							<TextView
-								android:id="@+id/detail_lecture_name"
-								android:layout_width="fill_parent"
-								android:layout_height="wrap_content"
-								android:layout_marginLeft="5dp"
-								android:layout_marginRight="5dp"
-								android:layout_marginTop="5dp"
-								android:gravity="center"
-								android:text="主题:"
-								android:textColor="@color/main_menu_pressed"
-								android:textSize="18sp"
-								android:textStyle="bold|italic" />
-
-							<ImageView
-								android:id="@+id/detail_line"
-								android:layout_width="fill_parent"
-								android:layout_height="1dp"
-								android:layout_below="@+id/detail_lecture_name"
-								android:layout_margin="3dp"
-								android:layout_marginTop="3dp"
-								android:background="@color/item_line" />
-
-							<TextView
-								android:id="@+id/detail_comment_content"
-								android:layout_width="fill_parent"
-								android:layout_height="wrap_content"
-								android:layout_alignParentLeft="true"
-								android:layout_below="@+id/detail_line"
-								android:layout_margin="3dp"
-								android:layout_marginBottom="3dp"
-								android:layout_marginLeft="5dp"
-								android:layout_marginRight="5dp"
-								android:layout_marginTop="3dp"
-								android:text="时间："
-								android:textColor="@color/item_content"
-								android:textSize="15sp"
-								android:textStyle="italic|bold" />
-
-							<TextView
-								android:id="@+id/detail_lecture_addr"
-								android:layout_width="fill_parent"
-								android:layout_height="wrap_content"
-								android:layout_alignParentLeft="true"
-								android:layout_below="@+id/detail_comment_content"
-								android:layout_margin="3dp"
-								android:layout_marginBottom="3dp"
-								android:layout_marginLeft="5dp"
-								android:layout_marginRight="5dp"
-								android:text="地点："
-								android:textColor="@color/item_content"
-								android:textSize="15sp"
-								android:textStyle="italic|bold" />
-
-							<TextView
-								android:id="@+id/detail_lecture_speaker"
-								android:layout_width="fill_parent"
-								android:layout_height="wrap_content"
-								android:layout_alignParentLeft="true"
-								android:layout_below="@+id/detail_lecture_addr"
-								android:layout_margin="3dp"
-								android:layout_marginLeft="5dp"
-								android:layout_marginRight="5dp"
-								android:text="讲者："
-								android:textColor="@color/item_content"
-								android:textSize="15sp"
-								android:textStyle="italic|bold" />
-
-							<TextView
-								android:id="@+id/detail_lecture_label"
-								android:layout_width="fill_parent"
-								android:layout_height="wrap_content"
-								android:layout_alignParentLeft="true"
-								android:layout_below="@+id/detail_lecture_speaker"
-								android:layout_margin="3dp"
-								android:layout_marginBottom="4dp"
-								android:layout_marginLeft="5dp"
-								android:layout_marginRight="5dp"
-								android:text="标签："
-								android:textColor="@color/item_content"
-								android:textSize="15sp"
-								android:textStyle="italic|bold" />
-
-							<ImageView
-								android:id="@+id/detail_line_2"
-								android:layout_width="fill_parent"
-								android:layout_height="1dp"
-								android:layout_below="@+id/detail_lecture_label"
-								android:background="@color/item_line" />
-
-							<TextView
-								android:id="@+id/about_speaker"
-								android:layout_width="fill_parent"
-								android:layout_height="wrap_content"
-								android:layout_alignParentLeft="true"
-								android:layout_below="@+id/detail_line_2"
-								android:layout_margin="3dp"
-								android:layout_marginLeft="5dp"
-								android:layout_marginRight="5dp"
-								android:text="讲者信息："
-								android:textColor="@color/item_content"
-								android:textSize="15sp"
-								android:textStyle="italic|bold" />
-
-							<ImageView
-								android:layout_width="fill_parent"
-								android:layout_height="1dp"
-								android:layout_below="@+id/about_speaker"
-								android:background="@color/item_line" />
-
-							<TextView
-								android:id="@+id/more_information"
-								android:layout_width="fill_parent"
-								android:layout_height="wrap_content"
-								android:layout_alignParentLeft="true"
-								android:layout_below="@+id/about_speaker"
-								android:layout_margin="3dp"
-								android:layout_marginLeft="5dp"
-								android:layout_marginRight="5dp"
-								android:text="背景资料："
-								android:textColor="@color/item_content"
-								android:textSize="15sp"
-								android:textStyle="italic|bold" />
-						</RelativeLayout>
-
-						<RelativeLayout
 							android:id="@+id/detail_relativeLayout3"
 							android:layout_width="fill_parent"
 							android:layout_height="wrap_content"
@@ -225,6 +92,141 @@
 							android:orientation="vertical"
 							android:paddingBottom="70dp" >
 						</LinearLayout>
+
+						<RelativeLayout
+						    android:id="@+id/detail_relativeLayout1"
+						    android:layout_width="fill_parent"
+						    android:layout_height="fill_parent"
+						    android:layout_alignParentLeft="true"
+						    android:layout_alignParentTop="true"
+						    android:orientation="vertical"
+						    android:paddingTop="50dp"
+						    android:textAlignment="center" >
+
+						    <TextView
+						        android:id="@+id/detail_lecture_name"
+						        android:layout_width="fill_parent"
+						        android:layout_height="wrap_content"
+						        android:layout_marginLeft="5dp"
+						        android:layout_marginRight="5dp"
+						        android:layout_marginTop="5dp"
+						        android:gravity="center"
+						        android:text="主题:"
+						        android:textColor="@color/main_menu_pressed"
+						        android:textSize="18sp"
+						        android:textStyle="bold|italic" />
+
+						    <ImageView
+						        android:id="@+id/detail_line"
+						        android:layout_width="fill_parent"
+						        android:layout_height="1dp"
+						        android:layout_below="@+id/detail_lecture_name"
+						        android:layout_margin="3dp"
+						        android:layout_marginTop="3dp"
+						        android:background="@color/item_line" />
+
+						    <TextView
+						        android:id="@+id/detail_comment_content"
+						        android:layout_width="fill_parent"
+						        android:layout_height="wrap_content"
+						        android:layout_alignParentLeft="true"
+						        android:layout_below="@+id/detail_line"
+						        android:layout_margin="3dp"
+						        android:layout_marginBottom="3dp"
+						        android:layout_marginLeft="5dp"
+						        android:layout_marginRight="5dp"
+						        android:layout_marginTop="3dp"
+						        android:text="时间："
+						        android:textColor="@color/item_content"
+						        android:textSize="15sp"
+						        android:textStyle="italic|bold" />
+
+						    <TextView
+						        android:id="@+id/detail_lecture_addr"
+						        android:layout_width="fill_parent"
+						        android:layout_height="wrap_content"
+						        android:layout_alignParentLeft="true"
+						        android:layout_below="@+id/detail_comment_content"
+						        android:layout_margin="3dp"
+						        android:layout_marginBottom="3dp"
+						        android:layout_marginLeft="5dp"
+						        android:layout_marginRight="5dp"
+						        android:text="地点："
+						        android:textColor="@color/item_content"
+						        android:textSize="15sp"
+						        android:textStyle="italic|bold" />
+
+						    <TextView
+						        android:id="@+id/detail_lecture_speaker"
+						        android:layout_width="fill_parent"
+						        android:layout_height="wrap_content"
+						        android:layout_alignParentLeft="true"
+						        android:layout_below="@+id/detail_lecture_addr"
+						        android:layout_margin="3dp"
+						        android:layout_marginLeft="5dp"
+						        android:layout_marginRight="5dp"
+						        android:text="讲者："
+						        android:textColor="@color/item_content"
+						        android:textSize="15sp"
+						        android:textStyle="italic|bold" />
+
+						    <TextView
+						        android:id="@+id/detail_lecture_label"
+						        android:layout_width="fill_parent"
+						        android:layout_height="wrap_content"
+						        android:layout_alignParentLeft="true"
+						        android:layout_below="@+id/detail_lecture_speaker"
+						        android:layout_margin="3dp"
+						        android:layout_marginBottom="4dp"
+						        android:layout_marginLeft="5dp"
+						        android:layout_marginRight="5dp"
+						        android:text="标签："
+						        android:textColor="@color/item_content"
+						        android:textSize="15sp"
+						        android:textStyle="italic|bold" />
+
+						    <ImageView
+						        android:id="@+id/detail_line_2"
+						        android:layout_width="fill_parent"
+						        android:layout_height="1dp"
+						        android:layout_below="@+id/detail_lecture_label"
+						        android:background="@color/item_line" />
+
+						    <TextView
+						        android:id="@+id/about_speaker"
+						        android:layout_width="fill_parent"
+						        android:layout_height="wrap_content"
+						        android:layout_alignParentLeft="true"
+						        android:layout_below="@+id/detail_line_2"
+						        android:layout_margin="3dp"
+						        android:layout_marginLeft="5dp"
+						        android:layout_marginRight="5dp"
+						        android:text="讲者信息："
+						        android:textColor="@color/item_content"
+						        android:textSize="15sp"
+						        android:textStyle="italic|bold" />
+
+						    <ImageView
+						        android:layout_width="fill_parent"
+						        android:layout_height="1dp"
+						        android:layout_below="@+id/about_speaker"
+						        android:background="@color/item_line" />
+
+						    <TextView
+						        android:id="@+id/more_information"
+						        android:layout_width="fill_parent"
+						        android:layout_height="wrap_content"
+						        android:layout_alignParentLeft="true"
+						        android:layout_below="@+id/about_speaker"
+						        android:layout_margin="3dp"
+						        android:layout_marginLeft="5dp"
+						        android:layout_marginRight="5dp"
+						        android:text="背景资料："
+						        android:textColor="@color/item_content"
+						        android:textSize="15sp"
+						        android:textStyle="italic|bold" />
+						</RelativeLayout>
+
 					</RelativeLayout>
 				</RelativeLayout>
 			</ScrollView>

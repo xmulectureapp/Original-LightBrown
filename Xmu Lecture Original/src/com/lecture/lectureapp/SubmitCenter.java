@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import com.lecture.layoutUtil.PopMenuView;
 import com.lecture.localdata.DetailInfo;
 import com.lecture.localdata.SubmitLecture;
 import com.lecture.util.SubmitLectureInterface;
@@ -25,6 +26,8 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.text.format.Time;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -52,6 +55,9 @@ public class SubmitCenter extends Activity {
 	private int year, monthOfYear, dayOfMonth, hourOfDay, minute;
 	
 	//Time mTime;  //用于转换Long型时间，来自Yang 2014 07 19 Night
+	
+	//下面是咸鱼的添加的代码，用于构建android的三个物理按键 2014 08 08 21:05   by xianyu
+	private PopMenuView popMenu;
 	
 	
 
@@ -527,4 +533,85 @@ public class SubmitCenter extends Activity {
 		
 		
 	}
-}
+	
+	//下面的代码先做保留，用于处理android的 三颗 虚拟按键
+	
+		@Override
+	    public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    	if (keyCode == KeyEvent.KEYCODE_BACK ) {  //获取 back键
+	    		
+	    		finish();
+	        	
+	    	}
+	    	else if( keyCode == KeyEvent.KEYCODE_MENU ){   //获取 Menu键			
+	    				
+	    			//实例化
+	    			popMenu = new PopMenuView(SubmitCenter.this, itemsOnClick);
+	    			//显示窗口
+	    			popMenu.showAtLocation( SubmitCenter.this.findViewById(R.id.submitcenter) , Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0); //设置layout在PopupWindow中显示的位置
+	    			
+	    			
+	    			
+	    		
+	    		
+	    		
+			}
+	    	return false;
+	    }
+	
+		//为弹出窗口popMenu实现监听类
+	    private OnClickListener  itemsOnClick = new OnClickListener(){
+
+			public void onClick(View v) {
+				Intent intent;
+				switch (v.getId()) {
+				case R.id.about_author:
+				
+					
+					intent = new Intent(SubmitCenter.this, AboutPages.class);
+					intent.putExtra("whichPage", "aboutAuthor");
+					startActivity( intent );
+					
+					if( popMenu != null )
+						popMenu.dismiss();
+					
+					
+					break;
+				case R.id.about_xmu_lecture:
+				
+					
+					intent = new Intent(SubmitCenter.this, AboutPages.class);
+					intent.putExtra("whichPage", "aboutXmuLecture");
+					startActivity( intent );
+					
+					if( popMenu != null )
+						popMenu.dismiss();
+					
+					break;
+				case R.id.about_app:
+					
+
+					intent = new Intent(SubmitCenter.this, AboutPages.class);
+					intent.putExtra("whichPage", "aboutApp");
+					startActivity( intent );
+					
+					if( popMenu != null )
+						popMenu.dismiss();
+					
+					break;
+				case R.id.pop_exitImageView:
+					Toast.makeText(SubmitCenter.this, "厦大讲座 已退出", Toast.LENGTH_LONG).show();
+					
+					if( popMenu != null )
+						popMenu.dismiss();
+					
+					SubmitCenter.this.finish();
+					break;
+					
+				default:
+					break;
+				}
+			}
+	    };
+		
+} // end class

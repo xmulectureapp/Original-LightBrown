@@ -2,7 +2,146 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/item_title_blue"
-    android:orientation="vertical" >
+    android:background="@drawable/item_view_background3"
+    android:orientation="vertical"
+    android:padding="4dp" >
+    
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp" >
+
+      <ImageView
+          android:layout_width="80dp"
+          android:layout_height="24dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginBottom="30dp"
+          android:layout_marginTop="17dp"
+          android:scaleType="centerInside"
+          android:src="@drawable/xmu_logo" />
+      
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/item_line" />
+      
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="10dp"
+           android:text="In Memory Of A Giant"
+           android:gravity="center"
+           android:textColor="@color/main_menu_pressed"
+           android:textStyle="bold" />
+      
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="10dp"
+           android:text="“Most people make the mistake of thinking design is what it looks like. People think it’s this veneer – that the designers are handed this box and told, ‘Make it look good!’ That’s not what we think design is. It’s not just what it looks like and feels like. Design is how it works.”"
+           android:textColor="@color/item_content"
+           android:textStyle="italic|bold" />
+      
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginBottom="5dp"
+           android:gravity="right"
+           android:text="-- Steve Jobs"
+           android:textColor="@color/main_menu_pressed"
+           android:textSize="15sp"
+           android:textStyle="italic|bold" />
+       
+         <ImageView
+             android:layout_width="fill_parent"
+             android:layout_height="1dp"
+             android:layout_marginTop="3dp"
+             android:background="@color/item_line" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="20dp"
+           android:text="关于作者："
+           android:textColor="@color/item_content"
+           android:textSize="17sp"
+           android:textStyle="italic" />
+      
+       <TextView
+           
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+            android:textColor="@color/main_menu_pressed"
+           android:text="      是的，很多时候NB的想法别人无法帮你实现，所以我们决定－自己来!"
+           android:textStyle="italic" />
+       <TextView
+           
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+            android:textColor="@color/main_menu_pressed"
+            android:gravity="center"
+           android:text="欢迎联系我们－微信: xianyuxmu"
+           android:textStyle="italic" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="10dp"
+           android:text="感谢以下作者："
+           android:textColor="@color/item_content"
+           android:textSize="17sp"
+           android:textStyle="italic" />
+      
+       <TextView
+           
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+            android:textColor="@color/main_menu_pressed"
+           android:text="\n      陈烨彬: 2012级厦门大学本科生，厦大讲座App项目负责人，负责界面、架构、美工视觉设计及实现！"
+           android:textStyle="italic" />
+       <TextView
+           
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+            android:textColor="@color/main_menu_pressed"
+           android:text="\n      张伟颖: 2011级厦门大学本科生，负责下拉刷新及讲座显示页面的实现！"
+           android:textStyle="italic" />
+       <TextView
+           
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+            android:textColor="@color/main_menu_pressed"
+           android:text="\n      柯泽扬: 2012级厦门大学本科生，负责主界面页卡、日历提醒以及提交讲座的实现！"
+           android:textStyle="italic" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:paddingBottom="120dp"
+           android:text="\n      廖坤城: 2012级厦门大学本科生，负责开机向导及设置中心的实现"
+           android:textColor="@color/main_menu_pressed"
+           android:textStyle="italic" />
+       
+       </LinearLayout>
+       </ScrollView>
 
 </LinearLayout>

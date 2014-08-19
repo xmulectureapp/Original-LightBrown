@@ -650,7 +650,7 @@ public class DetailView extends Activity {
 		// //
 		// 当系统调用System.currentTimeMillis()方法返回值与time相同时启动pi对应的组件
 
-		Toast.makeText(this, "添加到 收藏页面&日历 成功", Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "添加到收藏和日历 成功", Toast.LENGTH_SHORT).show();
 	}
 
 	public void deleteFromCalender() {
@@ -665,9 +665,9 @@ public class DetailView extends Activity {
 				null);
 		int rowE = this.getContentResolver().delete(deleteEventUri, null, null);
 		if (rowE > 0 && rowR > 0) {
-			Toast.makeText(this, "从 收藏页面&日历 删除成功", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "从收藏和日历 移除成功", Toast.LENGTH_SHORT).show();
 		} else
-			Toast.makeText(this, "从 收藏页面&日历 删除失败", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "从收藏 移除成功", Toast.LENGTH_SHORT).show();
 	}
 
 	//下面是每一则评论的item模板

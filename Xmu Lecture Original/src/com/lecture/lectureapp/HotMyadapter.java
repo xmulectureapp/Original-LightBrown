@@ -446,8 +446,8 @@ public class HotMyadapter extends BaseAdapter
 			GregorianCalendar startDate = event.getTimeCalendar();
 			GregorianCalendar endDate = event.getTimeCalendar();
 			
-			startDate.set(Calendar.HOUR_OF_DAY, 8);
-			startDate.set(Calendar.MINUTE, 0);
+			startDate.set(Calendar.HOUR_OF_DAY, 7);
+			startDate.set(Calendar.MINUTE, 30);
 
 			ContentResolver cr1 = mContext.getContentResolver(); // 添加新event，步骤是固定的
 			ContentValues values = new ContentValues();
@@ -495,9 +495,9 @@ public class HotMyadapter extends BaseAdapter
 			int rowE = mContext.getContentResolver().delete(deleteEventUri, null,
 					null);
 			if (rowE > 0 && rowR > 0) {
-				Toast.makeText(mContext, "从收藏和日历 删除成功", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, "从收藏和日历 移除成功", Toast.LENGTH_SHORT).show();
 			} else
-				Toast.makeText(mContext, "从收藏和日历 删除失败", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, "从收藏 移除成功", Toast.LENGTH_SHORT).show();
 		}
 		
 		//下面是咸鱼的修改，用于添加没有填写邮箱禁止评论的功能  2014年8月6日 23:16

@@ -2,7 +2,76 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+    android:background="@drawable/item_view_background3"
+    android:orientation="vertical"
+    android:padding="4dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp" >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="17dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/xmu_logo" />
+
+            <TextView
+                android:id="@+id/logo_textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="用户名和邮箱："
+                android:textColor="@color/main_menu_pressed"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/logo_textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="\n1 用户名：用于您对讲座进行评论以及回复讲座时所显示的名称，您可以不填写（此时，我们默认显示名为“听者”）！
+\n\n2 邮箱：如果您需要评论、回复评论，或者您需要提交讲座，您需要先填写您的邮箱，我们不会通过打扰您，也不会泄露您的邮箱！我们只会在您提交的讲座审核出现错误的时候通过这个邮箱联系您，而评论和回复评论需要邮箱是因为防止您的评论被我们的系统识别为垃圾评论（垃圾评论将被我们系统自动过滤，将不会显示）！
+\n"
+                android:textColor="@color/main_menu_pressed"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/logo_textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="筛选讲座："
+                android:textColor="@color/main_menu_pressed"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/logo_textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="70dp"
+                android:text="\n该设置有三种情况：
+\n\n1 只设置校区筛选：当您只打勾“校区筛选”的时候，在“定制”页面将显示您所打勾校区的讲座。例如：您只打勾了“厦门市区”，“定制”页面中将显示举办地为“厦门市区”的所有时间（从周一至周日）的讲座！
+\n\n2 只设置时间筛选：当您只打勾“时间筛选”的时候，在“定制“页面将显示您所打勾时间的讲座。例如：你只打勾了“MON”和“FRI”，“定制”页面中将显示举办时间为“星期一”和“星期五”的所有校区的讲座！
+\n\n3 同时设置校区、时间筛选：当您同时打勾“校区筛选”和“时间筛选”的时候，在“定制”页面将显示同时满足您所打勾的“校区”和“时间”筛选设置的讲座。例如：您同时打勾了“思明校区”和“MON”（指星期一），这时，“定制”页面中将显示举办地为“思明校区”  并且  时间是“星期一”的讲座！"
+                android:textColor="@color/main_menu_pressed"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

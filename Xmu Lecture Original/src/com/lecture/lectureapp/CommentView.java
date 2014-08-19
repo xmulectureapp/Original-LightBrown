@@ -146,9 +146,9 @@ public class CommentView extends Activity {
 					//get user info
 					SharedPreferences sharedPre = CommentView.this.getSharedPreferences("config",
 							CommentView.this.MODE_PRIVATE);
-					String userName  = sharedPre.getString("username", "无名的听者");
+					String userName  = sharedPre.getString("username", "听者");
 					if( userName.equals("") )
-						userName = "无名的听者";
+						userName = "听者";
 					String userEmail = sharedPre.getString("email", "出现为设置邮箱即可评论的错误，请联系-咸鱼!");
 					//set date
 					Time time = new Time();

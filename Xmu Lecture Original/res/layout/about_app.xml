@@ -2,7 +2,150 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/item_title_orange"
-    android:orientation="vertical" >
+    android:background="@drawable/item_view_background3"
+    android:orientation="vertical"
+    android:padding="4dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp" >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="17dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/xmu_logo" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/item_line" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="17dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo_launcher" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="厦大讲座"
+                android:textColor="@color/main_menu_pressed"
+                android:textStyle="italic|bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Version: X 2.1.7"
+                android:textColor="@color/main_menu_pressed"
+                android:textStyle="italic|bold" />
+            
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/item_line" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="App获取途径："
+                android:textColor="@color/item_content"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="\n      您可以通过豌豆夹、或者直接百度－厦大讲座App进行获取！我们提供国文版本以及国际版本（English Version）！"
+                android:textColor="@color/main_menu_pressed"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="App开发时间："
+                android:textColor="@color/item_content"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="\n      该应用由厦门大学2012级本科生陈烨彬、张伟颖、柯泽扬、廖坤城组建的志愿开发团队“未知 Unknown”团队于2014年厦大小学期期间开发出初步版本，而后由陈烨彬在暑假期间完善、测试、发布！"
+                android:textColor="@color/main_menu_pressed"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="App项目版权："
+                android:textColor="@color/item_content"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="\n      “未知 Unknown”团队成员将该项目无偿赠予厦大讲座网，并允许厦大讲座网团队开发和学习之用！感谢四位作者们对厦大讲座网做出的贡献！"
+                android:textColor="@color/main_menu_pressed"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="App使用说明："
+                android:textColor="@color/item_content"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="120dp"
+                android:text="\n该应用主界面分为五个标签页：
+\n\n      1 “热门HOT”：该标签页按讲座的按赞数从高到低显示所有的讲座
+\n\n      2 “定制”：该标签页根据您在 这是中心“我” 中的筛选设置从所有的讲座中筛选出你定制的讲座，第一次使用该App将默认定制所有讲座，你可以打开 设置中心“我”进行设置！你可以在 设置中心“我” 中的“关于设置”获取到设置相关的说明！
+\n\n      3 “收藏”：该标签页显示您收藏的所有讲座，在您点击收藏的时候，我们同时讲座该讲座添加到您的手机日历，日历将在该讲座开始的当前早上7:30推送提醒到您的通知栏！您可以通过取消收藏，我们同时会移除您的手机日历提醒！
+\n\n      4 “提交”：该标签页用于提交讲座信息！提交相关帮助在 “提交”标签页下面“关于提交”中点击查看！（讲座网的讲座信息大多收集于网络，或者用户通过网站lecture.xmu.edu.cn、邮箱lectureinfo.cn@gmail.com、厦大讲座App进行提交，我们讲座审核讲座信息后发布讲座信息）
+\n\n      5 “我”：该标签页用于设置用户名、邮箱以及您的筛选设置，你可以在“我”标签页下面的“关于设置”中获取更多设置帮助！"
+                android:textColor="@color/main_menu_pressed"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

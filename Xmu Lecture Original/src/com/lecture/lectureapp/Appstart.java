@@ -35,7 +35,6 @@ public class Appstart extends Activity {
 	 */
 
 	private SharedPreferences preferences;
-	private Editor editor;
 	private OutputStream os;
 
 	@Override
@@ -47,10 +46,7 @@ public class Appstart extends Activity {
 		// 判断是不是首次登录，
 		if (preferences.getBoolean("firststart", true)) 
 		{
-			editor = preferences.edit();
-			// 将登录标志位设置为false，下次登录时不在显示首次登录界面
-			editor.putBoolean("firststart", false);
-			editor.commit();
+			
 			
 			//下面来自YeBin的修改，用于第一次打开App时选中MyCenter中所有checkdbox，KunCheng，你的代码写得很好
 			

@@ -2,7 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="@drawable/item_view_background3"
+    android:orientation="vertical"
+    android:padding="4dp" >
     
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp" >
+
+      <ImageView
+          android:layout_width="80dp"
+          android:layout_height="24dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginBottom="3dp"
+          android:layout_marginTop="17dp"
+          android:scaleType="centerInside"
+          android:src="@drawable/xmu_logo" />
+      
+       <TextView
+           android:id="@+id/logo_textView1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:paddingBottom="120dp"
+           android:text="\n      如果您需要提交讲座到厦大讲座网，让更多的人了解、关注到这则讲座，因此，您可以从这个App提交！同时您也可以选择登陆厦大讲座网: lecture.xmu.edu.cn进行在线提交，或者给我们发送邮件: lectureinfo.cn@gmail.com！
+	\n      如果您将要在这个App提交讲座，那么你需要先到 设置中心“我” 里面进行邮箱设置（邮箱填写是为了确定消息来源，这样我们在审核讲座的时候如有问题便于与您取得联系，更好地发布讲座信息）！
+	\n      提交的表格中，有标注“(必填)”的为必填项，同时，如果有详细信息，您可以填写一下主讲人信息、讲座背景资料，这样能够更好地让听者了解到这则讲座！
+	\n      最后一栏是“信息来源”，在这栏中，您可以填写讲座相关的链接，便于听者了解到更加详细的内容！"
+           android:textColor="@color/main_menu_pressed"
+           android:textStyle="italic" />
+       
+       </LinearLayout>
+       </ScrollView>
 
 </LinearLayout>

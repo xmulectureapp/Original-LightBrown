@@ -6,10 +6,14 @@ import java.util.ArrayList;
 //import cn.buaa.myweixin.Whatsnew;
 //import cn.buaa.myweixin.WhatsnewDoor;
 
+
+
 import com.lecture.lectureapp.R;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
@@ -131,6 +135,12 @@ public class Guide extends Activity implements OnPageChangeListener{
         
     }
     public void startbutton(View v) {  
+    	
+    	Editor editor = getSharedPreferences("phone", Context.MODE_PRIVATE).edit();
+		// 将登录标志位设置为false，下次登录时不在显示首次登录界面
+		editor.putBoolean("firststart", false);
+		editor.commit();
+		
       	Intent intent = new Intent();
 		intent.setClass(Guide.this,MainView.class);
 		startActivity(intent);
