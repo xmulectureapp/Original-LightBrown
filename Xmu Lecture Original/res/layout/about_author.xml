@@ -85,7 +85,7 @@
            android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
             android:textColor="@color/main_menu_pressed"
-           android:text="      是的，很多时候NB的想法别人无法帮你实现，所以我们决定－自己来!"
+           android:text="      是的，很多时候想法别人无法帮你实现，所以我们决定－自己来!"
            android:textStyle="italic" />
        <TextView
            
@@ -113,7 +113,7 @@
            android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
             android:textColor="@color/main_menu_pressed"
-           android:text="\n      陈烨彬: 2012级厦门大学本科生，厦大讲座App项目负责人，负责界面、架构、美工视觉设计及实现！"
+           android:text="\n      陈烨彬: 2012级厦门大学本科生，厦大讲座App项目负责人！"
            android:textStyle="italic" />
        <TextView
            
@@ -121,7 +121,7 @@
            android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
             android:textColor="@color/main_menu_pressed"
-           android:text="\n      张伟颖: 2011级厦门大学本科生，负责下拉刷新及讲座显示页面的实现！"
+           android:text="\n      张伟颖: 2011级厦门大学本科生！"
            android:textStyle="italic" />
        <TextView
            
@@ -129,7 +129,7 @@
            android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
             android:textColor="@color/main_menu_pressed"
-           android:text="\n      柯泽扬: 2012级厦门大学本科生，负责主界面页卡、日历提醒以及提交讲座的实现！"
+           android:text="\n      柯泽扬: 2012级厦门大学本科生！"
            android:textStyle="italic" />
 
        <TextView
@@ -137,7 +137,7 @@
            android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
            android:paddingBottom="120dp"
-           android:text="\n      廖坤城: 2012级厦门大学本科生，负责开机向导及设置中心的实现"
+           android:text="\n      廖坤城: 2012级厦门大学本科生！"
            android:textColor="@color/main_menu_pressed"
            android:textStyle="italic" />
        

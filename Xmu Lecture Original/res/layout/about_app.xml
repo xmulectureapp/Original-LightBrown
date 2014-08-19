@@ -48,7 +48,7 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:text="厦大讲座"
-                android:textColor="@color/main_menu_pressed"
+                android:textColor="@color/top_title_color"
                 android:textStyle="italic|bold" />
 
             <TextView
@@ -58,7 +58,7 @@
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:text="Version: X 2.1.7"
-                android:textColor="@color/main_menu_pressed"
+                android:textColor="@color/top_title_color"
                 android:textStyle="italic|bold" />
             
             <ImageView
@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:text="App获取途径："
                 android:textColor="@color/item_content"
                 android:textSize="17sp"
