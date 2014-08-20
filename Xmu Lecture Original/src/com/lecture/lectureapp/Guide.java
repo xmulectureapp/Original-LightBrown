@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 
 
+
 import com.lecture.lectureapp.R;
 
 import android.app.Activity;
@@ -23,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -46,7 +48,8 @@ public class Guide extends Activity implements OnPageChangeListener{
         mPageViews.add(mInflater.inflate(R.layout.guide_item1, null));
         mPageViews.add(mInflater.inflate(R.layout.guide_item2, null));
         mPageViews.add(mInflater.inflate(R.layout.guide_item3, null));
-        mPageViews.add(mInflater.inflate(R.layout.guide_item4, null));
+        View view5 = mInflater.inflate(R.layout.guide_item4, null);
+        mPageViews.add( view5 );
 //        mPageViews.add(mInflater.inflate(R.layout.guide_item3, null));
         
         mMain = (FrameLayout) mInflater.inflate(R.layout.guide, null);
@@ -68,7 +71,20 @@ public class Guide extends Activity implements OnPageChangeListener{
         mViewPager.setAdapter(mPageAdapter);
         mViewPager.setOnPageChangeListener(this);
         setContentView(mMain);
-    }
+        
+        ((Button) view5.findViewById(R.id.startBtn)).setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				startbutton();
+				
+			}
+		});
+        
+        
+    }  // end onCreate()
     
     private PagerAdapter mPageAdapter = new PagerAdapter() {
         
@@ -134,7 +150,8 @@ public class Guide extends Activity implements OnPageChangeListener{
     public void onPageScrollStateChanged(int state) {
         
     }
-    public void startbutton(View v) {  
+    
+    public void startbutton() {  
     	
     	Editor editor = getSharedPreferences("phone", Context.MODE_PRIVATE).edit();
 		// 将登录标志位设置为false，下次登录时不在显示首次登录界面
