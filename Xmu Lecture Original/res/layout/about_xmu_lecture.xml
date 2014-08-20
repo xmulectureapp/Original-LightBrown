@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_view_background3"
+    android:orientation="vertical"
+    android:padding="4dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="4dp" >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="17dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/xmu_logo" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/item_line" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="17dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/lecture_original_logo" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="厦大讲座"
+                android:textColor="@color/top_title_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="lecture.xmu.edu.cn"
+                android:textColor="@color/top_title_color"
+                android:textStyle="bold|italic" />
+            
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/item_line" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="厦大讲座网简介："
+                android:textColor="@color/item_content"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="120dp"
+                android:text="\n      互联网的发展，让信息的传播越来越方便和简单。在这个时代，象牙塔中的我们也不断思考，如何运用它真正改善我们的生活。
+\n\n我们发现校园中的讲座信息都是散播在各处的——海报栏、学院的公告板、院系网站等，往往刚得知自己喜欢的讲座，看了详细信息才发现原来早已结束。作为一群热爱讲座的青年，我们想用自己的力量来改善这个问题，为校园为所有热爱讲座的同学做一点贡献。
+\n\n于是在我们的不断努力下，就有了今天的厦大讲座网。它是由厦大学生创办并独立运营、由图书馆支持的公益网站。讲座网的目标就是将厦大所有的讲座活动信息全面及时准确地传递给同学。创立六年来，讲座网已经覆盖了网站、邮箱、Google日历、微博、人人、微信、安卓APP等各种渠道，让每个人都可以按自己最喜欢的方式获取讲座信息。
+\n\n我们希望通过讲座网，让所有热爱讲座的人不再错过自己喜欢的讲座，也希望能让更多的人爱上讲座，让讲座这一资源更好地被大家接受与吸收。
+\n\n感谢互联网，让这一切可以实现!"
+                android:textColor="@color/main_menu_pressed"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

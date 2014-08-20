@@ -212,7 +212,7 @@ public class HotMyadapter extends BaseAdapter
 				*********************************/
 				
 			  holder.lectureName.setText(mData.get(position).getTitle());  
-			  holder.lectureTime.setText("时间: " + mData.get(position).getTime()); 
+			  holder.lectureTime.setText("时间: " + mData.get(position).getCustomTime()); 
 			  holder.lectureAddr.setText("地点: " + mData.get(position).getAddress());  
 			  holder.lectureSpeaker.setText("主讲: " + mData.get(position).getSpeaker()); 
 			  holder.lectureId.setText(mData.get(position).getUid());

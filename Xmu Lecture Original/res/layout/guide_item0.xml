@@ -4,10 +4,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-    <ImageView  
-        android:layout_width="match_parent"  
-        android:layout_height="match_parent"  
-        android:background="@drawable/guide_1" >  
-    </ImageView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/guide_1" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp" >
+            
+             <ImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:scaleType="centerInside"
+                 android:src="@drawable/guide_1_top" />
+            
+        </LinearLayout>
+        
+        
+    </RelativeLayout>
+    
     
 </LinearLayout>
