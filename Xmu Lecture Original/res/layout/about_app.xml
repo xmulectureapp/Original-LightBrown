@@ -99,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="\n      该应用由厦门大学2012级本科生陈烨彬、张伟颖、柯泽扬、廖坤城组建的志愿开发团队“未知 Unknown”团队于2014年厦大小学期期间开发出初步版本，而后由陈烨彬在暑假期间完善、测试、发布！"
+                android:text="\n      该应用是厦大讲座网2014年发展的目标之一，经由厦门大学2012级本科生陈烨彬、张伟颖、柯泽扬、廖坤城组建的志愿开发团队“未知 Unknown”团队于2014年厦大小学期期间开发出初步版本，而后由陈烨彬在暑假期间完善、测试、发布！"
                 android:textColor="@color/main_menu_pressed"
                 android:textStyle="italic" />
 
