@@ -161,7 +161,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler  {
 		WXImageObject imgObj;
 		try {
 			
-			Bitmap thumb = BitmapFactory.decodeResource(getResources(), R.drawable.wechat_sahre_img_black);  
+			Bitmap thumb = BitmapFactory.decodeResource(getResources(), R.drawable.wechat_sahre_img);  
 		    msg.setThumbImage(thumb);  
 			
 		} catch (Exception e) {
@@ -206,7 +206,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler  {
 		WXImageObject imgObj;
 		try {
 			
-			Bitmap thumb = BitmapFactory.decodeResource(getResources(), R.drawable.wechat_sahre_img_black);  
+			Bitmap thumb = BitmapFactory.decodeResource(getResources(), R.drawable.wechat_sahre_img);  
 		    msg.setThumbImage(thumb);  
 			
 		} catch (Exception e) {

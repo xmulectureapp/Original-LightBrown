@@ -3,7 +3,7 @@
     android:id="@+id/mainview"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/main_view_background5"
+    android:background="@drawable/main_view_background"
     android:orientation="vertical" >
 
 	<LinearLayout
@@ -25,7 +25,7 @@
 	    android:id="@+id/main_top"
 	    android:layout_width="fill_parent"
 	    android:layout_height="36dp"
-	    android:background="@drawable/top_bg"
+	    android:background="@drawable/top_header_bg"
 	    android:gravity="center_vertical"
 	    android:orientation="vertical" >
 
@@ -74,7 +74,7 @@
 				android:gravity="center"
 				android:includeFontPadding="false"
 				android:scaleType="matrix"
-				android:src="@drawable/back_none" />
+				android:src="@drawable/back_ico_none" />
 		</LinearLayout>
 
 		<LinearLayout
@@ -94,7 +94,7 @@
 				android:gravity="center"
 				android:includeFontPadding="false"
 				android:scaleType="matrix"
-				android:src="@drawable/back_none" />
+				android:src="@drawable/back_ico_none" />
 
 		</LinearLayout>
 	</RelativeLayout>
@@ -104,7 +104,7 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="55dp"
 	    android:layout_alignParentBottom="true"
-	    android:background="@drawable/bottom_bar11"
+	    android:background="@drawable/bottom_bar"
 	    android:orientation="vertical"
 	    android:tileMode="repeat" >
 

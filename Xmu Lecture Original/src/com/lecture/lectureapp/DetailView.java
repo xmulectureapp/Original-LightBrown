@@ -200,13 +200,13 @@ public class DetailView extends Activity {
 
 		if (detail_lectureEvent.isLike()) {
 			imageViewLike.setImageDrawable(getResources().getDrawable(
-					R.drawable.like_red));
+					R.drawable.like_green));
 			textViewLike.setTextColor(getResources().getColor(
 					R.color.main_menu_pressed));
 
 		} else {
 			imageViewLike.setImageDrawable(getResources().getDrawable(
-					R.drawable.like));
+					R.drawable.like_normal));
 			textViewLike.setTextColor(getResources().getColor(
 					R.color.main_menu_normal));
 
@@ -220,7 +220,7 @@ public class DetailView extends Activity {
 		// 下面的代码使用于 收藏按钮
 		if (detail_lectureEvent.isReminded()) {
 			imageViewRemind.setImageDrawable(getResources().getDrawable(
-					R.drawable.remind_red));
+					R.drawable.remind_green));
 			textViewRemind.setTextColor(getResources().getColor(
 					R.color.main_menu_pressed));
 
@@ -274,7 +274,7 @@ public class DetailView extends Activity {
 		    			event.setLike(!event.isLike());
 		    			
 		    			imageViewLike.setImageDrawable(getResources().getDrawable(
-								R.drawable.like_red));
+								R.drawable.like_green));
 						textViewLike.setTextColor(getResources().getColor(
 								R.color.main_menu_pressed));
 						// 喜欢的话，进行数据表LikeTable更新
@@ -317,7 +317,7 @@ public class DetailView extends Activity {
 		    			
 
 						imageViewLike.setImageDrawable(getResources().getDrawable(
-								R.drawable.like));
+								R.drawable.like_normal));
 						textViewLike.setTextColor(getResources().getColor(
 								R.color.main_menu_normal));
 						// 喜欢的话，进行数据表LikeTable更新
@@ -365,7 +365,7 @@ public class DetailView extends Activity {
 				event.setReminded(!event.isReminded());
 				if (event.isReminded()) {
 					imageViewRemind.setImageDrawable(v.getResources()
-							.getDrawable(R.drawable.remind_red));
+							.getDrawable(R.drawable.remind_green));
 					textViewRemind.setTextColor(v.getResources().getColor(
 							R.color.main_menu_pressed));
 					// 收藏的话，进行数据表CollectionTable更新

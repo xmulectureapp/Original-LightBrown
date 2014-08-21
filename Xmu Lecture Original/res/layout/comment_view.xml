@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentLeft="true"
-    android:background="@drawable/item_view_background3"
+    android:background="@drawable/item_view_background"
     android:orientation="vertical" >
     
     <RelativeLayout
@@ -25,7 +25,7 @@
             android:id="@+id/comment_header_bg"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:background="@drawable/top_bg" />
+            android:background="@drawable/top_header_bg" />
 
         <TextView
             android:id="@+id/comment_header_title"
@@ -78,7 +78,7 @@
                 android:gravity="center"
                 android:includeFontPadding="false"
                 android:scaleType="matrix"
-                android:src="@drawable/back_none" />
+                android:src="@drawable/back_ico_none" />
         </LinearLayout>
     </RelativeLayout> <!-- 用于添加header View -->
 

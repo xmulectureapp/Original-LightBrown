@@ -231,7 +231,7 @@
                 android:layout_margin="1dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/like"
+                android:background="@drawable/like_normal"
                 android:gravity="center_horizontal" />
 
             <TextView

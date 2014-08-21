@@ -225,12 +225,12 @@ public class RemindMyadapter extends BaseAdapter
 			  
 			  //下面的代码用于实现点赞后消失的BUG,Yao,  尼玛，看来你还是不行呀！还是放弃吧！^ ^
 			  if(mData.get(position).isLike()){
-				  holder.likeIcon.setImageDrawable(convertView.getResources().getDrawable(R.drawable.like_red));
+				  holder.likeIcon.setImageDrawable(convertView.getResources().getDrawable(R.drawable.like_green));
 				  holder.likeText.setTextColor(convertView.getResources().getColor(R.color.main_menu_pressed));
 				  
 			  }
 			  else {
-				  holder.likeIcon.setImageDrawable(convertView.getResources().getDrawable(R.drawable.like));
+				  holder.likeIcon.setImageDrawable(convertView.getResources().getDrawable(R.drawable.like_normal));
 				  holder.likeText.setTextColor(convertView.getResources().getColor(R.color.item_content));
 				  
 			  }
@@ -243,7 +243,7 @@ public class RemindMyadapter extends BaseAdapter
 				//holder.likeText.setText(mData.get(position).getLikeCount()); //No package identifier when getting value for resource  
 			  //下面的代码使用于 收藏按钮
 			  if(mData.get(position).isReminded()){
-				  holder.remindIcon.setImageDrawable(convertView.getResources().getDrawable(R.drawable.remind_red));
+				  holder.remindIcon.setImageDrawable(convertView.getResources().getDrawable(R.drawable.remind_green));
 				  remindText_change.setTextColor(convertView.getResources().getColor(R.color.main_menu_pressed));
 		    		
 			  }
@@ -326,7 +326,7 @@ public class RemindMyadapter extends BaseAdapter
 				    			
 				    			event.setLike(!event.isLike());
 				    			
-				    			likeIcon_change.setImageDrawable(v.getResources().getDrawable(R.drawable.like_red));
+				    			likeIcon_change.setImageDrawable(v.getResources().getDrawable(R.drawable.like_green));
 					    		likeText_change.setTextColor(v.getResources().getColor(R.color.main_menu_pressed));
 					    		event.updateLikeCount(1);//1 表示＋1
 					    		
@@ -364,7 +364,7 @@ public class RemindMyadapter extends BaseAdapter
 				    			
 				    			event.setLike(!event.isLike());
 				    			
-				    			likeIcon_change.setImageDrawable(v.getResources().getDrawable(R.drawable.like));
+				    			likeIcon_change.setImageDrawable(v.getResources().getDrawable(R.drawable.like_normal));
 								likeText_change.setTextColor(v.getResources().getColor(R.color.main_menu_normal));
 								event.updateLikeCount(-1);//-1 表示＋ (-1)
 				    			//喜欢的话，进行数据表LikeTable更新
@@ -404,7 +404,7 @@ public class RemindMyadapter extends BaseAdapter
 				    	event.setReminded(!event.isReminded());
 				    	if (event.isReminded())
 				    	{
-				    		remindIcon_change.setImageDrawable(v.getResources().getDrawable(R.drawable.remind_red));
+				    		remindIcon_change.setImageDrawable(v.getResources().getDrawable(R.drawable.remind_green));
 				    		remindText_change.setTextColor(v.getResources().getColor(R.color.main_menu_pressed));
 				    		
 				    		

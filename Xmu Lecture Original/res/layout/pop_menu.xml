@@ -169,7 +169,7 @@
 			    android:paddingBottom="3dp"
 			    android:paddingTop="3dp"
 			    android:scaleType="center"
-			    android:src="@drawable/pop_exit" />
+			    android:src="@drawable/pop_window_exit" />
 			
 		</LinearLayout>
 	</LinearLayout>
