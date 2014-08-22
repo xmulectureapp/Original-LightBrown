@@ -212,7 +212,7 @@ public class SubscribeMyadapter extends BaseAdapter
 				*********************************/
 				
 			  holder.lectureName.setText(mData.get(position).getTitle());  
-			  holder.lectureTime.setText("时间: " + mData.get(position).getTime()); 
+			  holder.lectureTime.setText("时间: " + mData.get(position).getCustomTime()); 
 			  holder.lectureAddr.setText("地点: " + mData.get(position).getAddress());  
 			  holder.lectureSpeaker.setText("主讲: " + mData.get(position).getSpeaker()); 
 			  holder.lectureId.setText(mData.get(position).getUid());
@@ -334,7 +334,7 @@ public class SubscribeMyadapter extends BaseAdapter
 				    			//喜欢的话，进行数据表LikeTable更新
 					    		DBCenter.setLike(dbCenter.getReadableDatabase(), event.getUid(), true);
 					    		
-					    		//LikeInterface.LikeGo(event.getUid(), "1");
+					    		new LikeInterface().LikeGo(event.getUid(), "1");
 				    			DBCenter.likeDBSync(dbCenter.getReadableDatabase(), event.getUid(), "1");
 				    			
 				    			//下面一句解决马上变Like数字
@@ -446,8 +446,8 @@ public class SubscribeMyadapter extends BaseAdapter
 			GregorianCalendar startDate = event.getTimeCalendar();
 			GregorianCalendar endDate = event.getTimeCalendar();
 			
-			startDate.set(Calendar.HOUR_OF_DAY, 8);
-			startDate.set(Calendar.MINUTE, 0);
+			startDate.set(Calendar.HOUR_OF_DAY, 7);
+			startDate.set(Calendar.MINUTE, 30);
 
 			ContentResolver cr1 = mContext.getContentResolver(); // 添加新event，步骤是固定的
 			ContentValues values = new ContentValues();
@@ -476,6 +476,9 @@ public class SubscribeMyadapter extends BaseAdapter
 			event.setReminderID( String.format( "%d", reminderInfo.getReminderId() ) );
 			event.setEventID( String.format( "%d", reminderInfo.getEventId() ) );
 			
+			Log.i("REMINDERID", event.getReminderID());
+			Log.i("EVENTID", event.getEventID());
+			
 
 			Toast.makeText(mContext, "添加到收藏和日历 成功", Toast.LENGTH_SHORT).show();
 			
@@ -495,9 +498,9 @@ public class SubscribeMyadapter extends BaseAdapter
 			int rowE = mContext.getContentResolver().delete(deleteEventUri, null,
 					null);
 			if (rowE > 0 && rowR > 0) {
-				Toast.makeText(mContext, "从收藏和日历 删除成功", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, "从收藏和日历 移除成功", Toast.LENGTH_SHORT).show();
 			} else
-				Toast.makeText(mContext, "从收藏和日历 删除失败", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, "从收藏 移除成功", Toast.LENGTH_SHORT).show();
 		}
 		
 		//下面是咸鱼的修改，用于添加没有填写邮箱禁止评论的功能  2014年8月6日 23:16
@@ -524,7 +527,7 @@ public class SubscribeMyadapter extends BaseAdapter
 				
 				switch (v.getId()) {
 				case R.id.wechat_share:
-					Toast.makeText(mContext, "微信好友", Toast.LENGTH_LONG).show();
+					
 					
 					
 					intent = new  Intent(mContext, WXEntryActivity.class);	
@@ -539,7 +542,7 @@ public class SubscribeMyadapter extends BaseAdapter
 					
 					break;
 				case R.id.wechat_circle_share:
-					Toast.makeText(mContext, "微信朋友圈", Toast.LENGTH_LONG).show();
+					
 					
 					
 					intent = new  Intent(mContext, WXEntryActivity.class);	
@@ -553,7 +556,7 @@ public class SubscribeMyadapter extends BaseAdapter
 					
 					break;
 				case R.id.weibo_share:
-					Toast.makeText(mContext, "新浪微博", Toast.LENGTH_LONG).show();
+					
 					
 					Intent sendIntent = new Intent();
 					
@@ -574,7 +577,7 @@ public class SubscribeMyadapter extends BaseAdapter
 									+ "地点: " + "#" + event.getAddress().substring(0, 4) + "#" + event.getAddress().substring(4) + " | " 
 									+ "主讲: " + event.getSpeaker() + " | "
 									+ "详情点击: "
-									+ event.getLink()  + " From #厦大讲座App Especially#" );
+									+ event.getLink()  + " From #厦大讲座App#" );
 	                	
 	                	sendIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  
 			

@@ -476,6 +476,9 @@ public class HotMyadapter extends BaseAdapter
 			event.setReminderID( String.format( "%d", reminderInfo.getReminderId() ) );
 			event.setEventID( String.format( "%d", reminderInfo.getEventId() ) );
 			
+			Log.i("REMINDERID", event.getReminderID());
+			Log.i("EVENTID", event.getEventID());
+			
 
 			Toast.makeText(mContext, "添加到收藏和日历 成功", Toast.LENGTH_SHORT).show();
 			

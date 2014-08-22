@@ -605,14 +605,17 @@ public class DetailView extends Activity {
 
 	}
 
+	
+	
 	public void insertIntoCalender() {
+		
 		long calId = 1;
 		Event event = detail_lectureEvent;
 		GregorianCalendar startDate = event.getTimeCalendar();
 		GregorianCalendar endDate = event.getTimeCalendar();
-
-		startDate.set(Calendar.HOUR_OF_DAY, 8);
-		startDate.set(Calendar.MINUTE, 0);
+		
+		startDate.set(Calendar.HOUR_OF_DAY, 7);
+		startDate.set(Calendar.MINUTE, 30);
 
 		ContentResolver cr1 = this.getContentResolver(); // 添加新event，步骤是固定的
 		ContentValues values = new ContentValues();
@@ -630,28 +633,45 @@ public class DetailView extends Activity {
 		ContentValues values1 = new ContentValues();
 		values1.put(Reminders.MINUTES, 10); // 设置提前几分钟提醒
 		values1.put(Reminders.EVENT_ID, eventId);
-		values1.put(Reminders.METHOD, Reminders.METHOD_ALERT); // 设置该事件为提醒
+		values1.put(Reminders.METHOD, Reminders.METHOD_ALERT);  //设置该事件为提醒
 		Uri newReminder = cr2.insert(Reminders.CONTENT_URI, values1); // 调用这个方法返回值是一个Uri
 		long reminderId = Long.parseLong(newReminder.getLastPathSegment());
 
 		// 记录数据
-		event.setReminderInfo(new ReminderInfo(eventId, reminderId));
+		ReminderInfo reminderInfo = new ReminderInfo(eventId, reminderId);
+		//event.setReminderInfo( reminderInfo );
+		
+		event.setReminderID( String.format( "%d", reminderInfo.getReminderId() ) );
+		event.setEventID( String.format( "%d", reminderInfo.getEventId() ) );
+		
+		Log.i("REMINDERID", event.getReminderID());
+		Log.i("EVENTID", event.getEventID());
+		
 
-		// setAlarmDeal(startMillis); //
-		// 设置reminder开始的时候，启动另一个activity
-		// // 设置全局定时器
-		// Intent intent = new Intent(this,
-		// AlarmActivity.class);
-		// PendingIntent pi =
-		// PendingIntent.getActivity(this, 0, intent, 0);
-		// AlarmManager aManager = (AlarmManager)
-		// getSystemService(Service.ALARM_SERVICE);
-		// aManager.set(AlarmManager.RTC_WAKEUP, time, pi);
-		// //
-		// 当系统调用System.currentTimeMillis()方法返回值与time相同时启动pi对应的组件
-
-		Toast.makeText(this, "添加到收藏和日历 成功", Toast.LENGTH_SHORT).show();
+		Toast.makeText(DetailView.this, "添加到收藏和日历 成功", Toast.LENGTH_SHORT).show();
+		
+		
 	}
+
+	public void deleteFromCalender1() {
+		Event event = detail_lectureEvent;
+		Uri deleteReminderUri = null;
+		Uri deleteEventUri = null;
+		deleteReminderUri = ContentUris.withAppendedId(Reminders.CONTENT_URI,
+				Long.parseLong( event.getReminderID() ) );
+		deleteEventUri = ContentUris.withAppendedId(Events.CONTENT_URI, 
+				Long.parseLong( event.getEventID() ) );
+		int rowR = this.getContentResolver().delete(deleteReminderUri,
+				null, null);
+		int rowE = this.getContentResolver().delete(deleteEventUri, null,
+				null);
+		if (rowE > 0 && rowR > 0) {
+			Toast.makeText(DetailView.this, "从收藏和日历 移除成功", Toast.LENGTH_SHORT).show();
+		} else
+			Toast.makeText(DetailView.this, "从收藏 移除成功", Toast.LENGTH_SHORT).show();
+	}
+	
+	
 
 	public void deleteFromCalender() {
 		Event event = detail_lectureEvent;

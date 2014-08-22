@@ -1434,6 +1434,8 @@ public class MainView extends Activity
 
 				break;
 			case 4:
+				
+				
 				mTab5.setImageDrawable(getResources().getDrawable(R.drawable.mycenter_pressed));
 				mText5.setTextColor(getResources().getColor(R.color.main_menu_pressed));
 				if (currIndex == 0) {

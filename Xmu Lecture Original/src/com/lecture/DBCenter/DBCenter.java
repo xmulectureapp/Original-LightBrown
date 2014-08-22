@@ -188,15 +188,21 @@ public class DBCenter extends SQLiteOpenHelper {
 			db.execSQL("UPDATE " + LECTURE_TABLE + " SET " + LECTURE_REMIND + "=0 WHERE " + LECTURE_UID + " NOT IN (SELECT " + COLLECTION_UID + " FROM "
 					+ COLLECTION_TABLE + " WHERE 1" + ")");
 			
+			// 
+			//db.execSQL("UPDATE A SET A." + LECTURE_REMIND + "=B." + ISREMIND + " FROM " +  LECTURE_TABLE  + " A, " + COLLECTION_TABLE + " B"+ " WHERE " + LECTURE_UID + " IN (SELECT " + COLLECTION_UID + " FROM "
+				//	+ COLLECTION_TABLE + " WHERE 1" + ")");
 			
 			///////////
+			
+			db.execSQL("delete from " + COLLECTION_TABLE + " where " + COLLECTION_UID + " NOT IN(SELECT " + LECTURE_UID + " FROM " + LECTURE_TABLE + ")");
+			Log.i("清除Collection", "OK!");
 			Cursor cursor;
 			cursor = db.rawQuery("select * from " + COLLECTION_TABLE + " where 1",new String[]{});
 			
 			while (cursor.moveToNext()) {
 				
 				//下面开始设置日历提醒的reminderID 以及 eventID
-				db.execSQL("UPDATE " + LECTURE_TABLE + " SET " + LECTURE_REMINDERID + "=" +  setStringNotEmpty( cursor.getString(3) ) + "," + LECTURE_EVENTID + "=" + setStringNotEmpty( cursor.getString(4) ) + " WHERE " + LECTURE_UID + "=" + cursor.getString(1) );
+				db.execSQL("UPDATE " + LECTURE_TABLE + " SET " + LECTURE_REMINDERID + "=\'" +  setStringNotEmpty( cursor.getString(3) ) + "\'," + LECTURE_EVENTID + "=\'" + setStringNotEmpty( cursor.getString(4) ) + "\' WHERE " + LECTURE_UID + "=" + cursor.getString(1) );
 				//db.execSQL("UPDATE " + LECTURE_TABLE + " SET " + LECTURE_EVENTID + "=" + cursor.getString(4) + " WHERE " + LECTURE_UID + "=" + cursor.getString(1) );
 
 				
@@ -221,6 +227,11 @@ public class DBCenter extends SQLiteOpenHelper {
 		//coloection table finc set collect
 		public static void setRemind(SQLiteDatabase db, String collectionUid, String reminderID, String eventID, Boolean isReminded){
 			Log.i("Collection列表", "开始setRemind");
+			
+			if(reminderID.equals("") || reminderID == null)
+				reminderID = "0";
+			if(eventID.equals("") || eventID == null)
+				eventID = "0";
 			
 		 //TODO 检验SQL语句的正确性
 			if(isReminded)
