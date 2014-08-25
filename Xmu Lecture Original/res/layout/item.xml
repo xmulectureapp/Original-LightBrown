@@ -144,7 +144,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/share"
-                android:clickable="true"
                 android:gravity="center_horizontal"
                 android:paddingTop="10dp" />
 
@@ -189,7 +188,6 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/comment"
-                android:clickable="true"
                 android:gravity="center_horizontal" />
 
             <TextView

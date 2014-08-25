@@ -299,16 +299,15 @@
 				android:paddingRight="5dp" >
 
 				<ImageView
-					android:id="@+id/detail_comment_icon"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:layout_gravity="center"
-					android:layout_margin="1dp"
-					android:layout_marginLeft="5dp"
-					android:layout_marginRight="10dp"
-					android:background="@drawable/comment"
-					android:clickable="true"
-					android:gravity="center_horizontal" />
+				    android:id="@+id/detail_comment_icon"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center"
+				    android:layout_margin="1dp"
+				    android:layout_marginLeft="5dp"
+				    android:layout_marginRight="10dp"
+				    android:background="@drawable/comment"
+				    android:gravity="center_horizontal" />
 
 				<TextView
 				    android:id="@+id/detail_comment_text"
