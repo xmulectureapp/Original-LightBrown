@@ -626,50 +626,56 @@ public class DetailView extends Activity {
 		values.put(Events.EVENT_LOCATION, event.getAddress());
 		values.put(Events.CALENDAR_ID, calId);
 		values.put(Events.EVENT_TIMEZONE, "GMT+8");
-		Uri uri = cr1.insert(Events.CONTENT_URI, values);
-		Long eventId = Long.parseLong(uri.getLastPathSegment()); // 获取刚才添加的event的Id
-
-		ContentResolver cr2 = this.getContentResolver(); // 为刚才新添加的event添加reminder
-		ContentValues values1 = new ContentValues();
-		values1.put(Reminders.MINUTES, 10); // 设置提前几分钟提醒
-		values1.put(Reminders.EVENT_ID, eventId);
-		values1.put(Reminders.METHOD, Reminders.METHOD_ALERT);  //设置该事件为提醒
-		Uri newReminder = cr2.insert(Reminders.CONTENT_URI, values1); // 调用这个方法返回值是一个Uri
-		long reminderId = Long.parseLong(newReminder.getLastPathSegment());
-
-		// 记录数据
-		ReminderInfo reminderInfo = new ReminderInfo(eventId, reminderId);
-		//event.setReminderInfo( reminderInfo );
 		
-		event.setReminderID( String.format( "%d", reminderInfo.getReminderId() ) );
-		event.setEventID( String.format( "%d", reminderInfo.getEventId() ) );
+		Uri eventsURI = Events.CONTENT_URI;
 		
-		Log.i("REMINDERID", event.getReminderID());
-		Log.i("EVENTID", event.getEventID());
 		
+		//Log.i("URL EVENTS", Events.CONTENT_URI.toString());
+		//Log.i("URI", eventsURI.toString());
+		
+		//Uri uri = cr1.insert(Events.CONTENT_URI, values);
+		
+		try{
+		Uri uri = cr1.insert(eventsURI, values);
+		
+			Log.i("URI", uri.toString());
 
-		Toast.makeText(DetailView.this, "添加到收藏和日历 成功", Toast.LENGTH_SHORT).show();
+			Long eventId = Long.parseLong(uri.getLastPathSegment()); // 获取刚才添加的event的Id
+
+			ContentResolver cr2 = this.getContentResolver(); // 为刚才新添加的event添加reminder
+			ContentValues values1 = new ContentValues();
+			values1.put(Reminders.MINUTES, 10); // 设置提前几分钟提醒
+			values1.put(Reminders.EVENT_ID, eventId);
+			values1.put(Reminders.METHOD, Reminders.METHOD_ALERT); // 设置该事件为提醒
+			Uri newReminder = cr2.insert(Reminders.CONTENT_URI, values1); // 调用这个方法返回值是一个Uri
+			long reminderId = Long.parseLong(newReminder.getLastPathSegment());
+
+			// 记录数据
+			ReminderInfo reminderInfo = new ReminderInfo(eventId, reminderId);
+			// event.setReminderInfo( reminderInfo );
+
+			event.setReminderID(String.format("%d",
+					reminderInfo.getReminderId()));
+			event.setEventID(String.format("%d", reminderInfo.getEventId()));
+
+			Log.i("REMINDERID", event.getReminderID());
+			Log.i("EVENTID", event.getEventID());
+
+			Toast.makeText(DetailView.this, "添加到收藏和日历 成功", Toast.LENGTH_SHORT)
+					.show();
+		
+		
+		
+		}catch(Exception e){
+			
+			Toast.makeText(DetailView.this, "您的默认日历已关闭 或者 已删除，请打开或安装后即可添加日历提醒!", Toast.LENGTH_SHORT).show();
+			
+		}
 		
 		
 	}
 
-	public void deleteFromCalender1() {
-		Event event = detail_lectureEvent;
-		Uri deleteReminderUri = null;
-		Uri deleteEventUri = null;
-		deleteReminderUri = ContentUris.withAppendedId(Reminders.CONTENT_URI,
-				Long.parseLong( event.getReminderID() ) );
-		deleteEventUri = ContentUris.withAppendedId(Events.CONTENT_URI, 
-				Long.parseLong( event.getEventID() ) );
-		int rowR = this.getContentResolver().delete(deleteReminderUri,
-				null, null);
-		int rowE = this.getContentResolver().delete(deleteEventUri, null,
-				null);
-		if (rowE > 0 && rowR > 0) {
-			Toast.makeText(DetailView.this, "从收藏和日历 移除成功", Toast.LENGTH_SHORT).show();
-		} else
-			Toast.makeText(DetailView.this, "从收藏 移除成功", Toast.LENGTH_SHORT).show();
-	}
+	
 	
 	
 
@@ -681,13 +687,23 @@ public class DetailView extends Activity {
 				event.getReminderInfo().getReminderId());
 		deleteEventUri = ContentUris.withAppendedId(Events.CONTENT_URI, event
 				.getReminderInfo().getEventId());
-		int rowR = this.getContentResolver().delete(deleteReminderUri, null,
-				null);
-		int rowE = this.getContentResolver().delete(deleteEventUri, null, null);
-		if (rowE > 0 && rowR > 0) {
-			Toast.makeText(this, "从收藏和日历 移除成功", Toast.LENGTH_SHORT).show();
-		} else
-			Toast.makeText(this, "从收藏 移除成功", Toast.LENGTH_SHORT).show();
+		
+		try{
+			int rowR = this.getContentResolver().delete(deleteReminderUri,
+					null, null);
+			int rowE = this.getContentResolver().delete(deleteEventUri, null,
+					null);
+			if (rowE > 0 && rowR > 0) {
+				Toast.makeText(this, "从收藏和日历 移除成功", Toast.LENGTH_SHORT).show();
+			} else
+				Toast.makeText(this, "从收藏 移除成功", Toast.LENGTH_SHORT).show();
+		
+	}catch(Exception e){
+		
+		Toast.makeText(DetailView.this, "抱歉，您的默认日历已关闭 或者 已删除，请打开后删除日历提醒!", Toast.LENGTH_SHORT).show();
+		
+	}
+		
 	}
 
 	//下面是每一则评论的item模板

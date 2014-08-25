@@ -458,7 +458,14 @@ public class HotMyadapter extends BaseAdapter
 			values.put(Events.EVENT_LOCATION, event.getAddress());
 			values.put(Events.CALENDAR_ID, calId);
 			values.put(Events.EVENT_TIMEZONE, "GMT+8");
+			
+			try {
+			
+
 			Uri uri = cr1.insert(Events.CONTENT_URI, values);
+			
+				
+			
 			Long eventId = Long.parseLong(uri.getLastPathSegment()); // 获取刚才添加的event的Id
 
 			ContentResolver cr2 = mContext.getContentResolver(); // 为刚才新添加的event添加reminder
@@ -482,26 +489,42 @@ public class HotMyadapter extends BaseAdapter
 
 			Toast.makeText(mContext, "添加到收藏和日历 成功", Toast.LENGTH_SHORT).show();
 			
-			
+			}catch(Exception e){
+				
+				Toast.makeText(mContext, "您的默认日历已关闭 或者 已删除，请打开 或 安装后即可添加日历提醒!", Toast.LENGTH_SHORT).show();
+				
+			}
 		}
 
-		public void deleteFromCalender() {
-			
-			Uri deleteReminderUri = null;
-			Uri deleteEventUri = null;
-			deleteReminderUri = ContentUris.withAppendedId(Reminders.CONTENT_URI,
-					Long.parseLong( event.getReminderID() ) );
-			deleteEventUri = ContentUris.withAppendedId(Events.CONTENT_URI, 
-					Long.parseLong( event.getEventID() ) );
+	public void deleteFromCalender() {
+
+		Uri deleteReminderUri = null;
+		Uri deleteEventUri = null;
+		deleteReminderUri = ContentUris.withAppendedId(Reminders.CONTENT_URI,
+				Long.parseLong(event.getReminderID()));
+		deleteEventUri = ContentUris.withAppendedId(Events.CONTENT_URI,
+				Long.parseLong(event.getEventID()));
+
+		try {
+			// 用于解决没有系统默认日历的时候，解决闪退问题 by xianyu 2014 08 25 11:00
 			int rowR = mContext.getContentResolver().delete(deleteReminderUri,
 					null, null);
-			int rowE = mContext.getContentResolver().delete(deleteEventUri, null,
-					null);
+			int rowE = mContext.getContentResolver().delete(deleteEventUri,
+					null, null);
 			if (rowE > 0 && rowR > 0) {
-				Toast.makeText(mContext, "从收藏和日历 移除成功", Toast.LENGTH_SHORT).show();
+				Toast.makeText(mContext, "从收藏和日历 移除成功", Toast.LENGTH_SHORT)
+						.show();
 			} else
 				Toast.makeText(mContext, "从收藏 移除成功", Toast.LENGTH_SHORT).show();
+
+		} catch (Exception e) {
+
+			Toast.makeText(mContext, "抱歉，您的默认日历已关闭 或者 已删除，请打开后删除日历提醒!",
+					Toast.LENGTH_SHORT).show();
+
 		}
+
+	}
 		
 		//下面是咸鱼的修改，用于添加没有填写邮箱禁止评论的功能  2014年8月6日 23:16
 		public Boolean hasEmail(Context context){
