@@ -85,7 +85,7 @@
            android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
             android:textColor="@color/main_menu_pressed"
-           android:text="      是的，很多时候想法别人无法帮你实现，所以我们决定－自己来!"
+           android:text="      好的艺术家复制作品，伟大的艺术家窃取灵感!"
            android:textStyle="italic" />
        <TextView
            
@@ -94,7 +94,7 @@
            android:layout_gravity="center_horizontal"
             android:textColor="@color/main_menu_pressed"
             android:gravity="center"
-           android:text="欢迎联系我们－微信: xianyuxmu"
+           android:text="欢迎联系我们－微信: xianyuxmu \n博客: NEXT17.ME"
            android:textStyle="italic" />
 
        <TextView

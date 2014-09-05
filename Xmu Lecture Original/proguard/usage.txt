@@ -1,0 +1,387 @@
+com.lecture.DBCenter.DBCenter:
+    public static final java.lang.String LECTURE_TABLE
+    public static final java.lang.String COLLECTION_TABLE
+    public static final java.lang.String LIKE_TABLE
+    120:129:public android.database.Cursor likeSelect(android.database.sqlite.SQLiteDatabase)
+    294:308:public static java.util.List L_converCursorToList(android.database.Cursor)
+    402:404:public DBCenter(android.content.Context,java.lang.String,android.database.sqlite.SQLiteDatabase$CursorFactory,int)
+    408:410:public DBCenter(android.content.Context,java.lang.String,android.database.sqlite.SQLiteDatabase$CursorFactory,int,android.database.DatabaseErrorHandler)
+com.lecture.SettingAndSubmit.SettingsCenter:
+    70:70:public java.lang.String getWeekdaySettings()
+    73:73:public java.lang.String getPlaceSettings()
+com.lecture.layoutUtil.RefreshableView:
+    public static final int STATUS_PULL_TO_REFRESH
+    public static final int STATUS_RELEASE_TO_REFRESH
+    public static final int STATUS_REFRESHING
+    public static final int STATUS_REFRESH_FINISHED
+    public static final int SCROLL_SPEED
+    public static final long ONE_MINUTE
+    public static final long ONE_HOUR
+    public static final long ONE_DAY
+    public static final long ONE_MONTH
+    public static final long ONE_YEAR
+    private static final java.lang.String UPDATED_AT
+com.lecture.lectureapp.Appstart:
+    private java.io.OutputStream os
+com.lecture.lectureapp.BuildConfig
+com.lecture.lectureapp.CommentView:
+    private static final int MESSAGE_SUBMIT_START
+    private static final int MESSAGE_SUBMIT_END
+    private static final int MESSAGE_SUBMIT_FAILED
+com.lecture.lectureapp.DetailView:
+    private android.widget.ImageView iv1
+    private android.widget.ListView commentListView
+    private static final int MESSAGE_DOWNLOAD_DETAIL_START
+    private static final int MESSAGE_DOWNLOAD_DETAIL_END
+    private static final int MESSAGE_DOWNLOAD_DETAIL_FAILED
+    private static final int MESSAGE_DOWNLOAD_COMMENTS_START
+    private static final int MESSAGE_DOWNLOAD_COMMENTS_END
+    private static final int MESSAGE_DOWNLOAD_COMMENTS_FAILED
+    private android.app.ProgressDialog mProgressDialog
+com.lecture.lectureapp.DetailView$DetailItemLinearLayout:
+    720:723:public DetailView$DetailItemLinearLayout(com.lecture.lectureapp.DetailView,android.content.Context,android.util.AttributeSet)
+    726:729:public DetailView$DetailItemLinearLayout(com.lecture.lectureapp.DetailView,android.content.Context,android.util.AttributeSet,int)
+com.lecture.lectureapp.DetailView$FootItemLinearLayout:
+    745:748:public DetailView$FootItemLinearLayout(com.lecture.lectureapp.DetailView,android.content.Context,android.util.AttributeSet)
+    751:754:public DetailView$FootItemLinearLayout(com.lecture.lectureapp.DetailView,android.content.Context,android.util.AttributeSet,int)
+com.lecture.lectureapp.HotMyadapter:
+    115:121:public HotMyadapter(android.content.Context)
+com.lecture.lectureapp.MainView:
+    public static final java.lang.String DB_NAME
+    private android.widget.LinearLayout mClose
+    private android.widget.LinearLayout mCloseBtn
+    private android.view.View layout
+    private android.widget.PopupWindow menuWindow
+    private android.view.LayoutInflater inflater
+    private android.view.View viewFooter
+    private android.widget.TextView foot_TextView
+    private static final int MESSAGE_REFRESH_START
+    private static final int MESSAGE_REFRESH_END
+    private static final int MESSAGE_REFRESH_FAILED
+    private static final int MESSAGE_PULL_REFRESH_START
+    private static final int MESSAGE_PULL_REFRESH_END
+    private static final int MESSAGE_PULL_REFRESH_FAILED
+    private static final int MESSAGE_PULL_REFRESH_LISTVIEW
+com.lecture.lectureapp.MainView$MainItemFootLinearLayout:
+    1559:1562:public MainView$MainItemFootLinearLayout(com.lecture.lectureapp.MainView,android.content.Context,android.util.AttributeSet)
+    1565:1568:public MainView$MainItemFootLinearLayout(com.lecture.lectureapp.MainView,android.content.Context,android.util.AttributeSet,int)
+com.lecture.lectureapp.R:
+    10:10:public R()
+com.lecture.lectureapp.RefreshCenter:
+    public static final java.lang.String DB_NAME
+    private static final int MESSAGE_REFRESH_START
+    private static final int MESSAGE_REFRESH_END
+    private static final int MESSAGE_REFRESH_FAILED
+com.lecture.lectureapp.RemindMyadapter:
+    115:121:public RemindMyadapter(android.content.Context)
+com.lecture.lectureapp.SubmitCenter:
+    private static final int MESSAGE_SUBMIT_START
+    private static final int MESSAGE_SUBMIT_END
+    private static final int MESSAGE_SUBMIT_FAILED
+com.lecture.lectureapp.SubscribeMyadapter:
+    115:121:public SubscribeMyadapter(android.content.Context)
+com.lecture.lectureapp.wxapi.WXEntryActivity:
+    public static final java.lang.String APP_ID
+    com.lecture.localdata.Event eventToShare
+    java.lang.String shareDirection
+com.lecture.localdata.Comment:
+    58:58:public java.lang.String getCommentDate()
+com.lecture.localdata.DetailInfo:
+    54:54:public java.util.List getKinds()
+    58:59:public void setKinds(java.util.List)
+    62:62:public java.util.List getKeyWords()
+    66:67:public void setKeyWords(java.util.List)
+com.lecture.localdata.Event:
+    175:175:public com.lecture.localdata.DetailInfo getDetailInfo()
+    179:180:public void setDetailInfo(com.lecture.localdata.DetailInfo)
+    183:183:public boolean isCalender()
+    187:188:public void setCalender(boolean)
+    211:212:public void setReminderInfo(com.lecture.localdata.ReminderInfo)
+    233:237:public com.lecture.localdata.Event merger(com.lecture.localdata.Event)
+com.lecture.util.GetCommentUtil:
+    private static final java.lang.String fileName
+    51:53:public static boolean isContainInfo(android.content.Context)
+com.lecture.util.GetDetailUtil:
+    private static final java.lang.String fileName
+    52:54:public static boolean isContainInfo(android.content.Context)
+com.lecture.util.GetEventsHttpUtil:
+    private static final java.lang.String fileName
+    43:45:public static boolean isContainInfo(android.content.Context)
+com.lecture.util.StatusInterface:
+    22:24:public StatusInterface()
+com.lecture.util.XmlUtil:
+    18:18:public XmlUtil()
+com.tencent.mm.sdk.constants.Build
+com.tencent.mm.sdk.constants.ConstantsAPI
+com.tencent.mm.sdk.constants.ConstantsAPI$Token
+com.tencent.mm.sdk.constants.ConstantsAPI$WXApp
+com.tencent.mm.sdk.modelbase.BaseResp$ErrCode
+com.tencent.mm.sdk.modelmsg.GetMessageFromWX:
+    private GetMessageFromWX()
+com.tencent.mm.sdk.modelmsg.GetMessageFromWX$Req:
+    public java.lang.String username
+com.tencent.mm.sdk.modelmsg.GetMessageFromWX$Resp
+com.tencent.mm.sdk.modelmsg.LaunchFromWX:
+    private LaunchFromWX()
+com.tencent.mm.sdk.modelmsg.LaunchFromWX$Resp
+com.tencent.mm.sdk.modelmsg.SendAuth:
+    private SendAuth()
+com.tencent.mm.sdk.modelmsg.SendAuth$Req
+com.tencent.mm.sdk.modelmsg.SendAuth$Resp:
+    private static final java.lang.String TAG
+    private static final int LENGTH_LIMIT
+com.tencent.mm.sdk.modelmsg.SendMessageToWX:
+    private SendMessageToWX()
+com.tencent.mm.sdk.modelmsg.SendMessageToWX$Req:
+    public static final int WXSceneSession
+    public static final int WXSceneTimeline
+    public static final int WXSceneFavorite
+    private static final java.lang.String TAG
+    private static final int FAV_CONTENT_LENGTH_LIMIT
+    public SendMessageToWX$Req(android.os.Bundle)
+com.tencent.mm.sdk.modelmsg.ShowMessageFromWX:
+    private ShowMessageFromWX()
+com.tencent.mm.sdk.modelmsg.ShowMessageFromWX$Resp
+com.tencent.mm.sdk.modelmsg.WXAppExtendObject
+com.tencent.mm.sdk.modelmsg.WXAppLaunchData
+com.tencent.mm.sdk.modelmsg.WXAppLaunchData$Builder
+com.tencent.mm.sdk.modelmsg.WXEmojiObject
+com.tencent.mm.sdk.modelmsg.WXFileObject:
+    private static final java.lang.String TAG
+    private static final int CONTENT_LENGTH_LIMIT
+    public WXFileObject(byte[])
+    public WXFileObject(java.lang.String)
+    public void setFileData(byte[])
+    public void setFilePath(java.lang.String)
+com.tencent.mm.sdk.modelmsg.WXImageObject
+com.tencent.mm.sdk.modelmsg.WXMediaMessage:
+    private static final java.lang.String TAG
+    private static final int THUMB_LENGTH_LIMIT
+    private static final int TITLE_LENGTH_LIMIT
+    private static final int DESCRIPTION_LENGTH_LIMIT
+    private static final int MEDIA_TAG_NAME_LENGTH_LIMIT
+    private static final int MESSAGE_ACTION_LENGTH_LIMIT
+    private static final int MESSAGE_EXT_LENGTH_LIMIT
+    public static final java.lang.String ACTION_WXAPPMESSAGE
+com.tencent.mm.sdk.modelmsg.WXMediaMessage$Builder:
+    public static final java.lang.String KEY_IDENTIFIER
+    public WXMediaMessage$Builder()
+com.tencent.mm.sdk.modelmsg.WXMediaMessage$IMediaObject:
+    public static final int TYPE_UNKNOWN
+    public static final int TYPE_TEXT
+    public static final int TYPE_IMAGE
+    public static final int TYPE_MUSIC
+    public static final int TYPE_VIDEO
+    public static final int TYPE_URL
+    public static final int TYPE_FILE
+    public static final int TYPE_APPDATA
+    public static final int TYPE_EMOJI
+    public static final int TYPE_PRODUCT
+com.tencent.mm.sdk.modelmsg.WXMusicObject
+com.tencent.mm.sdk.modelmsg.WXTextObject
+com.tencent.mm.sdk.modelmsg.WXVideoObject
+com.tencent.mm.sdk.modelmsg.WXWebpageObject:
+    private static final java.lang.String TAG
+    private static final int LENGTH_LIMIT
+    public WXWebpageObject(java.lang.String)
+com.tencent.mm.sdk.modelmsg.package-info
+com.tencent.mm.sdk.modelpay.PayReq
+com.tencent.mm.sdk.modelpay.PayReq$Options
+org.jsoup.Connection
+org.jsoup.Connection$Base
+org.jsoup.Connection$KeyVal
+org.jsoup.Connection$Method
+org.jsoup.Connection$Request
+org.jsoup.Connection$Response
+org.jsoup.Jsoup
+org.jsoup.examples.ListLinks
+org.jsoup.helper.DataUtil
+org.jsoup.helper.DescendableLinkedList
+org.jsoup.helper.DescendableLinkedList$1
+org.jsoup.helper.DescendableLinkedList$DescendingIterator
+org.jsoup.helper.HttpConnection
+org.jsoup.helper.HttpConnection$1
+org.jsoup.helper.HttpConnection$Base
+org.jsoup.helper.HttpConnection$KeyVal
+org.jsoup.helper.HttpConnection$Request
+org.jsoup.helper.HttpConnection$Response
+org.jsoup.helper.StringUtil
+org.jsoup.helper.Validate
+org.jsoup.nodes.Attribute
+org.jsoup.nodes.Attributes
+org.jsoup.nodes.Attributes$1
+org.jsoup.nodes.Attributes$Dataset
+org.jsoup.nodes.Attributes$Dataset$DatasetIterator
+org.jsoup.nodes.Attributes$Dataset$EntrySet
+org.jsoup.nodes.Comment
+org.jsoup.nodes.DataNode
+org.jsoup.nodes.Document
+org.jsoup.nodes.Document$OutputSettings
+org.jsoup.nodes.Document$QuirksMode
+org.jsoup.nodes.DocumentType
+org.jsoup.nodes.Element
+org.jsoup.nodes.Entities
+org.jsoup.nodes.Entities$EscapeMode
+org.jsoup.nodes.Node
+org.jsoup.nodes.Node$OuterHtmlVisitor
+org.jsoup.nodes.TextNode
+org.jsoup.nodes.XmlDeclaration
+org.jsoup.parser.CharacterReader
+org.jsoup.parser.ParseError
+org.jsoup.parser.Parser
+org.jsoup.parser.Tag
+org.jsoup.parser.Token
+org.jsoup.parser.Token$1
+org.jsoup.parser.Token$Character
+org.jsoup.parser.Token$Comment
+org.jsoup.parser.Token$Doctype
+org.jsoup.parser.Token$EOF
+org.jsoup.parser.Token$EndTag
+org.jsoup.parser.Token$StartTag
+org.jsoup.parser.Token$Tag
+org.jsoup.parser.Token$TokenType
+org.jsoup.parser.TokenQueue
+org.jsoup.parser.Tokeniser
+org.jsoup.parser.TokeniserState
+org.jsoup.parser.TokeniserState$1
+org.jsoup.parser.TokeniserState$10
+org.jsoup.parser.TokeniserState$11
+org.jsoup.parser.TokeniserState$12
+org.jsoup.parser.TokeniserState$13
+org.jsoup.parser.TokeniserState$14
+org.jsoup.parser.TokeniserState$15
+org.jsoup.parser.TokeniserState$16
+org.jsoup.parser.TokeniserState$17
+org.jsoup.parser.TokeniserState$18
+org.jsoup.parser.TokeniserState$19
+org.jsoup.parser.TokeniserState$2
+org.jsoup.parser.TokeniserState$20
+org.jsoup.parser.TokeniserState$21
+org.jsoup.parser.TokeniserState$22
+org.jsoup.parser.TokeniserState$23
+org.jsoup.parser.TokeniserState$24
+org.jsoup.parser.TokeniserState$25
+org.jsoup.parser.TokeniserState$26
+org.jsoup.parser.TokeniserState$27
+org.jsoup.parser.TokeniserState$28
+org.jsoup.parser.TokeniserState$29
+org.jsoup.parser.TokeniserState$3
+org.jsoup.parser.TokeniserState$30
+org.jsoup.parser.TokeniserState$31
+org.jsoup.parser.TokeniserState$32
+org.jsoup.parser.TokeniserState$33
+org.jsoup.parser.TokeniserState$34
+org.jsoup.parser.TokeniserState$35
+org.jsoup.parser.TokeniserState$36
+org.jsoup.parser.TokeniserState$37
+org.jsoup.parser.TokeniserState$38
+org.jsoup.parser.TokeniserState$39
+org.jsoup.parser.TokeniserState$4
+org.jsoup.parser.TokeniserState$40
+org.jsoup.parser.TokeniserState$41
+org.jsoup.parser.TokeniserState$42
+org.jsoup.parser.TokeniserState$43
+org.jsoup.parser.TokeniserState$44
+org.jsoup.parser.TokeniserState$45
+org.jsoup.parser.TokeniserState$46
+org.jsoup.parser.TokeniserState$47
+org.jsoup.parser.TokeniserState$48
+org.jsoup.parser.TokeniserState$49
+org.jsoup.parser.TokeniserState$5
+org.jsoup.parser.TokeniserState$50
+org.jsoup.parser.TokeniserState$51
+org.jsoup.parser.TokeniserState$52
+org.jsoup.parser.TokeniserState$53
+org.jsoup.parser.TokeniserState$54
+org.jsoup.parser.TokeniserState$55
+org.jsoup.parser.TokeniserState$56
+org.jsoup.parser.TokeniserState$57
+org.jsoup.parser.TokeniserState$58
+org.jsoup.parser.TokeniserState$59
+org.jsoup.parser.TokeniserState$6
+org.jsoup.parser.TokeniserState$60
+org.jsoup.parser.TokeniserState$61
+org.jsoup.parser.TokeniserState$62
+org.jsoup.parser.TokeniserState$63
+org.jsoup.parser.TokeniserState$64
+org.jsoup.parser.TokeniserState$65
+org.jsoup.parser.TokeniserState$66
+org.jsoup.parser.TokeniserState$67
+org.jsoup.parser.TokeniserState$7
+org.jsoup.parser.TokeniserState$8
+org.jsoup.parser.TokeniserState$9
+org.jsoup.parser.TreeBuilder
+org.jsoup.parser.TreeBuilderState
+org.jsoup.parser.TreeBuilderState$1
+org.jsoup.parser.TreeBuilderState$10
+org.jsoup.parser.TreeBuilderState$11
+org.jsoup.parser.TreeBuilderState$12
+org.jsoup.parser.TreeBuilderState$13
+org.jsoup.parser.TreeBuilderState$14
+org.jsoup.parser.TreeBuilderState$15
+org.jsoup.parser.TreeBuilderState$16
+org.jsoup.parser.TreeBuilderState$17
+org.jsoup.parser.TreeBuilderState$18
+org.jsoup.parser.TreeBuilderState$19
+org.jsoup.parser.TreeBuilderState$2
+org.jsoup.parser.TreeBuilderState$20
+org.jsoup.parser.TreeBuilderState$21
+org.jsoup.parser.TreeBuilderState$22
+org.jsoup.parser.TreeBuilderState$23
+org.jsoup.parser.TreeBuilderState$24
+org.jsoup.parser.TreeBuilderState$3
+org.jsoup.parser.TreeBuilderState$4
+org.jsoup.parser.TreeBuilderState$5
+org.jsoup.parser.TreeBuilderState$6
+org.jsoup.parser.TreeBuilderState$7
+org.jsoup.parser.TreeBuilderState$8
+org.jsoup.parser.TreeBuilderState$9
+org.jsoup.safety.Cleaner
+org.jsoup.safety.Cleaner$ElementMeta
+org.jsoup.safety.Whitelist
+org.jsoup.safety.Whitelist$AttributeKey
+org.jsoup.safety.Whitelist$AttributeValue
+org.jsoup.safety.Whitelist$Protocol
+org.jsoup.safety.Whitelist$TagName
+org.jsoup.safety.Whitelist$TypedValue
+org.jsoup.select.Collector
+org.jsoup.select.Collector$Accumulator
+org.jsoup.select.CombiningEvaluator
+org.jsoup.select.CombiningEvaluator$And
+org.jsoup.select.CombiningEvaluator$Or
+org.jsoup.select.Elements
+org.jsoup.select.Evaluator
+org.jsoup.select.Evaluator$AllElements
+org.jsoup.select.Evaluator$Attribute
+org.jsoup.select.Evaluator$AttributeKeyPair
+org.jsoup.select.Evaluator$AttributeStarting
+org.jsoup.select.Evaluator$AttributeWithValue
+org.jsoup.select.Evaluator$AttributeWithValueContaining
+org.jsoup.select.Evaluator$AttributeWithValueEnding
+org.jsoup.select.Evaluator$AttributeWithValueMatching
+org.jsoup.select.Evaluator$AttributeWithValueNot
+org.jsoup.select.Evaluator$AttributeWithValueStarting
+org.jsoup.select.Evaluator$Class
+org.jsoup.select.Evaluator$ContainsOwnText
+org.jsoup.select.Evaluator$ContainsText
+org.jsoup.select.Evaluator$Id
+org.jsoup.select.Evaluator$IndexEquals
+org.jsoup.select.Evaluator$IndexEvaluator
+org.jsoup.select.Evaluator$IndexGreaterThan
+org.jsoup.select.Evaluator$IndexLessThan
+org.jsoup.select.Evaluator$Matches
+org.jsoup.select.Evaluator$MatchesOwn
+org.jsoup.select.Evaluator$Tag
+org.jsoup.select.NodeTraversor
+org.jsoup.select.NodeVisitor
+org.jsoup.select.QueryParser
+org.jsoup.select.Selector
+org.jsoup.select.Selector$SelectorParseException
+org.jsoup.select.StructuralEvaluator
+org.jsoup.select.StructuralEvaluator$Has
+org.jsoup.select.StructuralEvaluator$ImmediateParent
+org.jsoup.select.StructuralEvaluator$ImmediatePreviousSibling
+org.jsoup.select.StructuralEvaluator$Not
+org.jsoup.select.StructuralEvaluator$Parent
+org.jsoup.select.StructuralEvaluator$PreviousSibling
+org.jsoup.select.StructuralEvaluator$Root

@@ -42,6 +42,9 @@ public class Appstart extends Activity {
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.appstart);
+		
+		
+		
 		preferences = getSharedPreferences("phone", Context.MODE_PRIVATE);
 		// 判断是不是首次登录，
 		if (preferences.getBoolean("firststart", true)) 
@@ -83,7 +86,7 @@ public class Appstart extends Activity {
 					Log.i("Guide","开始转换到Guide.java");
 					Appstart.this.finish();
 				}
-			}, 1500);
+			}, 1300);
 			
 			
 			// 下面是咸鱼的增加，用于统计手机的安装次数、打开次数、刷新次数  2014年8月14日
