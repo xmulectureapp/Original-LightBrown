@@ -109,6 +109,8 @@ com.lecture.util.GetEventsHttpUtil:
     43:45:public static boolean isContainInfo(android.content.Context)
 com.lecture.util.StatusInterface:
     22:24:public StatusInterface()
+com.lecture.util.SubmitLectureInterface:
+    private static final java.lang.String fileName
 com.lecture.util.XmlUtil:
     18:18:public XmlUtil()
 com.tencent.mm.sdk.constants.Build

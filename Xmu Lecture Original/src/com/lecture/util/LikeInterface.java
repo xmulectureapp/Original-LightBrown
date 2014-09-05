@@ -33,12 +33,13 @@ public class LikeInterface {
 				InputStream in = null;
 				try {
 					Log.i("DownLoad","开始设置Url并开始下载！");
-					URL url = new URL("http://lecture.xmu.edu.cn/appinterface/like_interface.php?id="+id+"&isliked="+isLiked);
+					URL url = new URL("http://lecture.xmu.edu.cn/cloud.app/app-set-like/id="+id+"&isliked="+isLiked);
 					connection = (HttpURLConnection) url.openConnection();
 					if(connection.getResponseCode() == HttpURLConnection.HTTP_OK)
 						Log.i("按赞","连接成功！");
 					else {
 						Log.i("按赞","连接失败！");
+						Log.i("按赞失败状态",String.format("%d", connection.getResponseCode() ) );
 					}
 					
 				}

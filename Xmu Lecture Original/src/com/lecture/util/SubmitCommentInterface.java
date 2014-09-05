@@ -61,6 +61,7 @@ public class SubmitCommentInterface {
 						Log.i("提交评论","连接成功！");
 					else {
 						Log.i("提交评论","连接失败！");
+						Log.i("提交失败状态",String.format("%d", connection.getResponseCode() ) );
 					}
 					
 					mCallback.onEnd();

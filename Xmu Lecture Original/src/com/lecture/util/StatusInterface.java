@@ -34,7 +34,7 @@ public class StatusInterface {
 				InputStream in = null;
 				try {
 					
-					URL url = new URL( "http://lecture.xmu.edu.cn/appinterface/status_interface.php?status="+status );
+					URL url = new URL( "http://lecture.xmu.edu.cn/cloud.app/app-status/status="+status );
 					connection = (HttpURLConnection) url.openConnection();
 					if(connection.getResponseCode() == HttpURLConnection.HTTP_OK)
 						Log.i("Status","连接成功！");

@@ -75,7 +75,7 @@ public class GetDetailUtil {
 			
 				try {
 					Log.i("详细信息","开始下载详细信息!");
-					URL url = new URL("http://lecture.xmu.edu.cn/appinterface/detail_interface.php?id=" + id);
+					URL url = new URL("http://lecture.xmu.edu.cn/cloud.app/app-get-detail/id=" + id);
 					connection = (HttpURLConnection) url.openConnection();
 					in = new BufferedInputStream(connection.getInputStream());
 					File outFile = new File(context.getCacheDir()

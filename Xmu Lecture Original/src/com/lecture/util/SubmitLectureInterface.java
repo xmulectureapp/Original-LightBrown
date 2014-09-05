@@ -1,5 +1,7 @@
 package com.lecture.util;
 
+import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,10 +13,12 @@ import java.net.URLEncoder;
 
 import com.lecture.localdata.DetailInfo;
 
+import android.content.Context;
 import android.util.Log;
 
 public class SubmitLectureInterface {
 	
+	private static final String fileName = "error.xml";
 	private static SubmitLectureInterface singleEventsUtil;
 
 	public static SubmitLectureInterface getInstance(SubmitCallback callback) {
@@ -41,7 +45,7 @@ public class SubmitLectureInterface {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void SubmitGo(final String xml){
+	public void SubmitGo(final Context context, final String xml){
 		
 		new Thread(new Runnable() {	
 
@@ -61,7 +65,12 @@ public class SubmitLectureInterface {
 						Log.i("提交","连接成功！");
 					else {
 						Log.i("提交","连接失败！");
+						Log.i("提交失败状态",String.format("%d", connection.getResponseCode() ) );
 					}
+					
+					
+					
+					
 					
 					mCallback.onEnd();
 					
@@ -71,7 +80,7 @@ public class SubmitLectureInterface {
 				catch (IOException e) {
 					mCallback.onNoInternet();
 					
-					e.printStackTrace();
+					Log.i("提交", e.toString() );
 				} 
 				finally {
 					try {

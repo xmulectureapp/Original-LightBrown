@@ -6709,7 +6709,7 @@ com.lecture.util.SubmitLectureInterface -> com.lecture.d.q:
     com.lecture.util.SubmitLectureInterface$SubmitCallback mCallback -> b
     com.lecture.util.SubmitLectureInterface getInstance(com.lecture.util.SubmitLectureInterface$SubmitCallback) -> a
     void setCallback(com.lecture.util.SubmitLectureInterface$SubmitCallback) -> b
-    void SubmitGo(java.lang.String) -> a
+    void SubmitGo(android.content.Context,java.lang.String) -> a
     com.lecture.util.SubmitLectureInterface$SubmitCallback access$0(com.lecture.util.SubmitLectureInterface) -> a
 com.lecture.util.SubmitLectureInterface$1 -> com.lecture.d.r:
     com.lecture.util.SubmitLectureInterface this$0 -> a

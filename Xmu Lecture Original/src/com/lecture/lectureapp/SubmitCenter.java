@@ -486,7 +486,7 @@ public class SubmitCenter extends Activity {
 						submitHandler.sendMessage(msg);
 					}
 				});
-		submitInterface.SubmitGo(xmlToSubmit);
+		submitInterface.SubmitGo(this, xmlToSubmit);
 		
 	}
 	
